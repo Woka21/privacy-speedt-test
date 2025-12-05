@@ -1,0 +1,111 @@
+/* ===== DARK MODE STYLES ===== */
+[data-theme="dark"] {
+    /* Dark theme overrides */
+    --background: #0f172a;
+    --surface: #1e293b;
+    --card-background: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    
+    /* Adjusted colors for dark mode */
+    --primary-color: #3b82f6;
+    --secondary-color: #34d399;
+    --danger-color: #f87171;
+    --warning-color: #fbbf24;
+}
+
+/* ===== DARK MODE SPECIFIC ADJUSTMENTS ===== */
+[data-theme="dark"] body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+[data-theme="dark"] .header {
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .speed-test-container {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid #334155;
+}
+
+[data-theme="dark"] .speed-card {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid #334155;
+}
+
+[data-theme="dark"] .primary-card {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+[data-theme="dark"] .primary-card::before {
+    background: linear-gradient(90deg, #ffffff, #f1f5f9);
+}
+
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .tool-card,
+[data-theme="dark"] .faq-item {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid #334155;
+}
+
+[data-theme="dark"] .blog-cta,
+[data-theme="dark"] .footer {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+[data-theme="dark"] .progress-bg {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .gauge-bg {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: #334155;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    border-color: var(--primary-color);
+}
+
+/* ===== DARK MODE TRANSITIONS ===== */
+body,
+.header,
+.speed-test-container,
+.speed-card,
+.blog-card,
+.tool-card,
+.faq-item,
+.footer,
+.blog-cta {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== DARK MODE ACCESSIBILITY ===== */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --background: #0f172a;
+        --surface: #1e293b;
+        --card-background: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --border-color: #334155;
+    }
+}
+
+/* ===== DARK MODE REDUCED MOTION ===== */
+@media (prefers-color-scheme: dark) and (prefers-reduced-motion: reduce) {
+    body,
+    .header,
+    .speed-test-container,
+    .speed-card {
+        transition: none !important;
+    }
+}
