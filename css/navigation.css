@@ -11,6 +11,92 @@
     z-index: 1000;
 }
 
+/* Location/ISP Detection Banner */
+.detection-banner {
+    background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+    color: white;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideDown 0.5s ease-out;
+}
+
+.detection-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.detection-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.detection-text {
+    flex: 1;
+    min-width: 200px;
+}
+
+.detection-text strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.detection-text p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.detection-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.primary-button.small,
+.secondary-button.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.primary-button.small {
+    background: white;
+    color: var(--primary-color);
+}
+
+.primary-button.small:hover {
+    background: #f8f9fa;
+    transform: translateY(-1px);
+}
+
+.secondary-button.small {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.secondary-button.small:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;

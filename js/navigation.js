@@ -1,13 +1,219 @@
 /**
  * Navigation Enhancement Script
- * Mobile menu toggle and smooth scrolling
+ * Mobile menu toggle, smooth scrolling, and location/ISP detection
  */
+
+class LocationISPDetector {
+    constructor() {
+        this.detectionBanner = document.getElementById('detection-banner');
+        this.detectionMessage = document.getElementById('detection-message');
+        this.detectionSuggestion = document.getElementById('detection-suggestion');
+        this.visitLocalPageBtn = document.getElementById('visit-local-page');
+        this.dismissDetectionBtn = document.getElementById('dismiss-detection');
+        this.userLocation = null;
+        this.userISP = null;
+        this.detectedPageUrl = null;
+        this.init();
+    }
+
+    async init() {
+        // Check if user has already dismissed detection
+        if (localStorage.getItem('detectionDismissed')) {
+            return;
+        }
+
+        // Start detection process
+        await this.detectLocationAndISP();
+
+        // Show banner if we have detection results
+        if (this.userLocation && this.userISP) {
+            this.showDetectionBanner();
+        }
+    }
+
+    async detectLocationAndISP() {
+        try {
+            // Get user's IP and location data
+            const response = await fetch('https://ipapi.co/json/');
+            const data = await response.json();
+
+            this.userLocation = {
+                city: data.city,
+                region: data.region,
+                country: data.country_name
+            };
+
+            this.userISP = data.org || data.asn;
+
+            // Find matching content page
+            this.findMatchingPage();
+
+        } catch (error) {
+            console.log('Location detection failed:', error);
+            // Fallback to basic geolocation API
+            this.fallbackGeolocation();
+        }
+    }
+
+    async fallbackGeolocation() {
+        if (navigator.geolocation) {
+            try {
+                const position = await new Promise((resolve, reject) => {
+                    navigator.geolocation.getCurrentPosition(resolve, reject, {
+                        timeout: 10000,
+                        enableHighAccuracy: false
+                    });
+                });
+
+                // Use reverse geocoding to get city
+                const response = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`);
+                const data = await response.json();
+
+                this.userLocation = {
+                    city: data.city,
+                    region: data.principalSubdivision,
+                    country: data.countryName
+                };
+
+                this.findMatchingPage();
+
+            } catch (error) {
+                console.log('Geolocation fallback failed:', error);
+            }
+        }
+    }
+
+    findMatchingPage() {
+        // Load city and ISP data
+        this.loadDataFiles().then(() => {
+            this.matchUserToPage();
+        });
+    }
+
+    async loadDataFiles() {
+        try {
+            const [citiesResponse, ispsResponse] = await Promise.all([
+                fetch('/data/cities.json'),
+                fetch('/data/isps.json')
+            ]);
+
+            this.citiesData = await citiesResponse.json();
+            this.ispsData = await ispsResponse.json();
+        } catch (error) {
+            console.log('Failed to load data files:', error);
+        }
+    }
+
+    matchUserToPage() {
+        let bestMatch = null;
+        let matchScore = 0;
+
+        // Find best city match
+        if (this.citiesData && this.userLocation) {
+            const userCity = this.userLocation.city.toLowerCase();
+            const userRegion = this.userLocation.region.toLowerCase();
+
+            for (const city of this.citiesData) {
+                const cityName = city.name.toLowerCase();
+                const citySlug = city.slug;
+
+                // Exact city match
+                if (cityName === userCity) {
+                    bestMatch = { type: 'city', name: city.name, slug: citySlug, score: 100 };
+                    break;
+                }
+
+                // Partial match
+                if (cityName.includes(userCity) || userCity.includes(cityName)) {
+                    if (matchScore < 80) {
+                        matchScore = 80;
+                        bestMatch = { type: 'city', name: city.name, slug: citySlug, score: 80 };
+                    }
+                }
+            }
+        }
+
+        // Find best ISP match
+        if (this.ispsData && this.userISP) {
+            const userISP = this.userISP.toLowerCase();
+
+            for (const isp of this.ispsData) {
+                const ispName = isp.name.toLowerCase();
+                const ispSlug = isp.slug;
+
+                // Check if ISP name is in user's ISP string
+                if (userISP.includes(ispName) || ispName.includes(userISP.split(' ')[0])) {
+                    // If we have a city match, combine them
+                    if (bestMatch && bestMatch.type === 'city') {
+                        this.detectedPageUrl = `/content/ISPs/${ispSlug}-speed-test-${bestMatch.slug}.html`;
+                        this.detectedISP = isp.name;
+                        this.detectedCity = bestMatch.name;
+                        return;
+                    } else {
+                        // ISP only match
+                        this.detectedPageUrl = `/content/ISPs/${ispSlug}-speed-test-new-york.html`; // Default city
+                        this.detectedISP = isp.name;
+                        this.detectedCity = 'New York';
+                        return;
+                    }
+                }
+            }
+        }
+
+        // If no ISP match but we have city, use general city page
+        if (bestMatch && bestMatch.type === 'city') {
+            this.detectedPageUrl = `/content/locations/speed-test-${bestMatch.slug}.html`;
+            this.detectedCity = bestMatch.name;
+        }
+    }
+
+    showDetectionBanner() {
+        if (!this.detectionBanner) return;
+
+        // Update banner content
+        if (this.detectedISP && this.detectedCity) {
+            this.detectionMessage.textContent = `We detected you're in ${this.detectedCity} using ${this.detectedISP}`;
+            this.detectionSuggestion.textContent = `Check your local ${this.detectedISP} speeds or explore other options`;
+        } else if (this.detectedCity) {
+            this.detectionMessage.textContent = `We detected you're in ${this.detectedCity}`;
+            this.detectionSuggestion.textContent = `Check internet speeds in your area or find local providers`;
+        } else {
+            return; // Don't show banner if no useful detection
+        }
+
+        // Show banner
+        this.detectionBanner.classList.remove('hidden');
+
+        // Setup event listeners
+        if (this.visitLocalPageBtn) {
+            this.visitLocalPageBtn.addEventListener('click', () => {
+                if (this.detectedPageUrl) {
+                    window.location.href = this.detectedPageUrl;
+                }
+            });
+        }
+
+        if (this.dismissDetectionBtn) {
+            this.dismissDetectionBtn.addEventListener('click', () => {
+                this.dismissBanner();
+            });
+        }
+    }
+
+    dismissBanner() {
+        if (this.detectionBanner) {
+            this.detectionBanner.classList.add('hidden');
+            localStorage.setItem('detectionDismissed', 'true');
+        }
+    }
+}
 
 class NavigationEnhancer {
     constructor() {
         this.mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         this.navMenu = document.querySelector('.nav-menu');
         this.dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        this.locationDetector = new LocationISPDetector();
         this.init();
     }
 
