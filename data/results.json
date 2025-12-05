@@ -1,0 +1,212 @@
+[
+  {
+    "speed": 1,
+    "rating": "Very Slow",
+    "description": "Basic browsing only",
+    "capabilities": ["Email (slow)", "Text websites", "Basic messaging", "Simple web browsing"],
+    "limitations": ["Cannot stream video", "No video calls", "No file downloads", "Single device only"],
+    "recommendation": "Upgrade immediately - insufficient for modern usage",
+    "ispSuggestion": "Look for minimum 25 Mbps plans",
+    "useCases": {
+      "streaming": "SD video only (buffering likely)",
+      "gaming": "Not suitable for gaming",
+      "videoCalls": "Audio calls only (poor quality)",
+      "downloads": "Very slow (hours for large files)",
+      "multipleDevices": "Struggles with 2+ devices"
+    },
+    "netflixCapabilities": "SD only with buffering",
+    "zoomCapabilities": "Audio only, poor quality",
+    "gamingCapabilities": "Not suitable",
+    "comparison": "Bottom 5% of US households",
+    "futureProof": "Not future-proof - upgrade required"
+  },
+  {
+    "speed": 5,
+    "rating": "Slow",
+    "description": "Light usage only",
+    "capabilities": ["SD video streaming", "Music streaming", "Basic video calls", "Simple web browsing"],
+    "limitations": ["Cannot stream HD video", "Slow file downloads", "Multiple devices struggle", "4K video impossible"],
+    "recommendation": "Upgrade for better experience",
+    "ispSuggestion": "Consider 25-50 Mbps plans",
+    "useCases": {
+      "streaming": "HD video on 1 device",
+      "gaming": "Casual gaming only",
+      "videoCalls": "SD video calls (acceptable)",
+      "downloads": "Slow (30 min for 1GB file)",
+      "multipleDevices": "Struggles with 3+ devices"
+    },
+    "netflixCapabilities": "HD on 1 device comfortably",
+    "zoomCapabilities": "SD video calls (acceptable)",
+    "gamingCapabilities": "Casual gaming only",
+    "comparison": "Bottom 15% of US households", 
+    "futureProof": "Not future-proof - upgrade recommended"
+  },
+  {
+    "speed": 10,
+    "rating": "Basic",
+    "description": "Single device usage",
+    "capabilities": ["HD video streaming", "Video calls", "Web browsing", "Music streaming", "Email"],
+    "limitations": ["Multiple streams struggle", "Large downloads slow", "4K video impossible", "Gaming while streaming difficult"],
+    "recommendation": "Suitable for 1-2 people with light usage",
+    "ispSuggestion": "25-100 Mbps recommended for families",
+    "useCases": {
+      "streaming": "HD video on 2 devices max",
+      "gaming": "Online gaming (lag possible)",
+      "videoCalls": "HD video calls (good quality)",
+      "downloads": "Moderate (15 min for 1GB file)",
+      "multipleDevices": "Works for 2-3 light users"
+    },
+    "netflixCapabilities": "HD on 2 devices maximum",
+    "zoomCapabilities": "HD video calls (good quality)",
+    "gamingCapabilities": "Online gaming (some lag possible)",
+    "comparison": "Bottom 30% of US households",
+    "futureProof": "Basic future-proofing - upgrade when possible"
+  },
+  {
+    "speed": 25,
+    "rating": "Good",
+    "description": "Small household suitable",
+    "capabilities": ["Multiple HD streams", "Video conferencing", "File downloads", "Online gaming", "Multiple devices"],
+    "limitations": ["4K streaming on 1-2 devices only", "Large file downloads take time", "Heavy gaming while streaming may lag"],
+    "recommendation": "Good for 2-3 people with moderate usage",
+    "ispSuggestion": "Consider 100+ Mbps for heavy usage",
+    "useCases": {
+      "streaming": "Multiple HD streams comfortably",
+      "gaming": "Online gaming (good performance)",
+      "videoCalls": "Multiple HD video calls",
+      "downloads": "Good (6 min for 1GB file)",
+      "multipleDevices": "Works well for 2-3 users"
+    },
+    "netflixCapabilities": "Multiple HD streams comfortably",
+    "zoomCapabilities": "Multiple HD video calls simultaneously",
+    "gamingCapabilities": "Online gaming (good performance)",
+    "comparison": "Bottom 50% of US households",
+    "futureProof": "Adequate for current needs - consider upgrade for 4K"
+  },
+  {
+    "speed": 50,
+    "rating": "Very Good",
+    "description": "Family-friendly speed",
+    "capabilities": ["4K streaming", "Multiple video calls", "Fast downloads", "Online gaming", "Multiple devices"],
+    "limitations": ["Multiple 4K streams may buffer", "Very large files still take time", "Professional video work may struggle"],
+    "recommendation": "Excellent for most households",
+    "ispSuggestion": "100+ Mbps for power users",
+    "useCases": {
+      "streaming": "4K streaming on multiple devices",
+      "gaming": "Gaming while streaming (good)",
+      "videoCalls": "Multiple 4K video calls",
+      "downloads": "Fast (2 min for 1GB file)",
+      "multipleDevices": "Excellent for 3-4 users"
+    },
+    "netflixCapabilities": "4K streaming on multiple devices",
+    "zoomCapabilities": "Multiple 4K video calls simultaneously",
+    "gamingCapabilities": "Gaming while streaming (good performance)",
+    "comparison": "Below average (60th percentile)",
+    "futureProof": "Good future-proofing - suitable for most families"
+  },
+  {
+    "speed": 100,
+    "rating": "Excellent",
+    "description": "Power user speed",
+    "capabilities": ["Multiple 4K streams", "Gaming while streaming", "Fast large downloads", "Professional video work", "Multiple power users"],
+    "limitations": ["None for most households", "Professional work suitable", "Multiple 4K + gaming fine"],
+    "recommendation": "Perfect for most families and power users",
+    "ispSuggestion": "You're well-equipped - consider higher for professionals",
+    "useCases": {
+      "streaming": "Multiple 4K streams + gaming",
+      "gaming": "Professional-level gaming performance",
+      "videoCalls": "Multiple 4K professional calls",
+      "downloads": "Very fast (1 min for 1GB file)",
+      "multipleDevices": "Excellent for 5+ heavy users"
+    },
+    "netflixCapabilities": "Multiple 4K streams + gaming simultaneously",
+    "zoomCapabilities": "Multiple 4K professional video calls",
+    "gamingCapabilities": "Professional-level gaming performance",
+    "comparison": "Above average (75th percentile)",
+    "futureProof": "Excellent future-proofing - suitable for years"
+  },
+  {
+    "speed": 200,
+    "rating": "Outstanding",
+    "description": "Enthusiast level",
+    "capabilities": ["Professional streaming", "Multiple 4K + gaming", "Instant large downloads", "Professional video work", "Multiple power users"],
+    "limitations": ["None for residential use", "Professional work excellent", "Future-proof for years"],
+    "recommendation": "Future-proof choice for tech enthusiasts",
+    "ispSuggestion": "Perfect for tech enthusiasts and professionals",
+    "useCases": {
+      "streaming": "Professional streaming setup",
+      "gaming": "Competitive gaming + streaming",
+      "videoCalls": "Studio-quality video calls",
+      "downloads": "Instant (30 sec for 1GB file)",
+      "multipleDevices": "Professional setup capability"
+    },
+    "netflixCapabilities": "Professional streaming setup capability",
+    "zoomCapabilities": "Studio-quality multiple video calls",
+    "gamingCapabilities": "Competitive gaming + streaming simultaneously",
+    "comparison": "Top 20% of US households",
+    "futureProof": "Outstanding future-proofing - professional grade"
+  },
+  {
+    "speed": 300,
+    "rating": "Premium",
+    "description": "Professional grade",
+    "capabilities": ["Professional video work", "Multiple 4K streams", "Instant everything", "Studio-quality streaming", "Enterprise applications"],
+    "limitations": ["Overkill for most homes", "Professional applications", "Enterprise-level capability"],
+    "recommendation": "Professional grade for content creators",
+    "ispSuggestion": "Perfect for content creators and professionals",
+    "useCases": {
+      "streaming": "Studio-quality professional streaming",
+      "gaming": "Professional esports + streaming",
+      "videoCalls": "Broadcast-quality video calls",
+      "downloads": "Instant (20 sec for 1GB file)",
+      "multipleDevices": "Enterprise-level capability"
+    },
+    "netflixCapabilities": "Studio-quality professional streaming",
+    "zoomCapabilities": "Broadcast-quality multiple video calls",
+    "gamingCapabilities": "Professional esports + streaming simultaneously",
+    "comparison": "Top 10% of US households",
+    "futureProof": "Premium future-proofing - professional grade"
+  },
+  {
+    "speed": 500,
+    "rating": "Ultra Premium",
+    "description": "Enterprise level",
+    "capabilities": ["8K streaming", "Professional studios", "Instant everything", "Multiple professional streams", "Enterprise applications"],
+    "limitations": ["Overkill for most homes", "Enterprise applications", "Maximum residential capability"],
+    "recommendation": "Enterprise grade for maximum performance",
+    "ispSuggestion": "Maximum residential capability - you've reached the top",
+    "useCases": {
+      "streaming": "8K streaming capability",
+      "gaming": "Multiple professional gaming setups",
+      "videoCalls": "Broadcast studio capability",
+      "downloads": "Instant (10 sec for 1GB file)",
+      "multipleDevices": "Maximum residential capability"
+    },
+    "netflixCapabilities": "8K streaming capability",
+    "zoomCapabilities": "Broadcast studio capability",
+    "gamingCapabilities": "Multiple professional gaming setups",
+    "comparison": "Top 5% of US households",
+    "futureProof": "Ultra premium future-proofing - maximum residential"
+  },
+  {
+    "speed": 1000,
+    "rating": "Gigabit",
+    "description": "Maximum residential",
+    "capabilities": ["Everything instantly", "Multiple 8K streams", "Professional studios", "Maximum residential capability", "No limitations"],
+    "limitations": ["No residential limitations", "Maximum possible", "Professional grade"],
+    "recommendation": "Maximum residential - you've reached the top",
+    "ispSuggestion": "You've reached the top - perfect performance",
+    "useCases": {
+      "streaming": "Everything instantly - no limitations",
+      "gaming": "Maximum possible gaming performance",
+      "videoCalls": "Maximum professional capability",
+      "downloads": "Instant (5 sec for 1GB file)",
+      "multipleDevices": "Maximum possible residential capability"
+    },
+    "netflixCapabilities": "Everything instantly - no limitations",
+    "zoomCapabilities": "Maximum professional capability possible",
+    "gamingCapabilities": "Maximum possible gaming performance",
+    "comparison": "Top 1% of US households",
+    "futureProof": "Maximum future-proofing - you've reached the top"
+  }
+]

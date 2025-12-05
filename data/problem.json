@@ -1,0 +1,300 @@
+[
+  {
+    "keyword": "internet keeps disconnecting",
+    "volume": 90500,
+    "difficulty": 25,
+    "title": "Internet Keeps Disconnecting? 15 Proven Fixes That Actually Work [2024]",
+    "description": "Stop internet disconnections with these proven solutions. Works for Xfinity, Spectrum, AT&T and all connection types. Includes ISP-specific fixes.",
+    "sections": [
+      "Quick Fixes (30 seconds)",
+      "Router & Modem Solutions", 
+      "ISP-Specific Issues (Xfinity, Spectrum, AT&T)",
+      "Advanced Troubleshooting",
+      "When to Call Your ISP"
+    ],
+    "related": [
+      "wifi keeps disconnecting",
+      "internet drops every hour", 
+      "connection unstable",
+      "internet keeps dropping",
+      "wifi disconnects frequently"
+    ],
+    "faq": [
+      {
+        "question": "Why does my internet keep disconnecting every few minutes?",
+        "answer": "Internet disconnections every few minutes are usually caused by router issues, ISP problems, or interference. Try restarting your router first, then check for service outages in your area. If using Xfinity, check the xFi app for network status."
+      },
+      {
+        "question": "Is it normal for internet to disconnect occasionally?",
+        "answer": "Occasional disconnections (once per week) can happen, but daily disconnections indicate a problem. Contact your ISP if basic troubleshooting doesn't help and the issue persists for more than a day."
+      },
+      {
+        "question": "Should I contact my ISP if internet keeps disconnecting?",
+        "answer": "Yes, contact your ISP if you've tried basic troubleshooting (restart, check cables) and the issue persists. For Xfinity: 1-800-XFINITY, Spectrum: 1-855-707-7328, AT&T: 1-800-288-2020."
+      }
+    ],
+    "ispSpecific": {
+      "Xfinity": "Check xFi app for network status, restart gateway through app, check for regional outages",
+      "Spectrum": "Use My Spectrum app diagnostics, check service status, reset equipment through app",
+      "AT&T": "Run Smart Home Manager diagnostics, check for area outages, contact technical support"
+    },
+    "statistics": {
+      "fixesSuccessRate": "89%",
+      "averageFixTime": "15 minutes",
+      "ispResponseTime": "24-48 hours"
+    }
+  },
+  {
+    "keyword": "why is my internet slow",
+    "volume": 122000,
+    "difficulty": 35,
+    "title": "Why Is My Internet Slow? Complete Speed Diagnosis Guide [2024]",
+    "description": "Diagnose and fix slow internet speeds with our comprehensive troubleshooting guide. Includes speed test methods, ISP-specific solutions, and time-based analysis.",
+    "sections": [
+      "Speed Test Diagnosis (Accurate Methods)",
+      "Common Causes of Slow Internet",
+      "ISP-Specific Issues (Peak Hours, Throttling)",
+      "Device-Specific Solutions",
+      "Time-Based Speed Issues",
+      "Advanced Solutions"
+    ],
+    "related": [
+      "internet slow at night",
+      "wifi slow but ethernet fast",
+      "download speed slow",
+      "why is my wifi slow",
+      "internet speed slow today"
+    ],
+    "faq": [
+      {
+        "question": "What is considered slow internet speed?",
+        "answer": "Anything below 25 Mbps for download is considered slow for modern usage. You need at least 5 Mbps for HD streaming and 25 Mbps for 4K streaming. Contact your ISP if consistently below these speeds."
+      },
+      {
+        "question": "Can my ISP slow down my internet?",
+        "answer": "Yes, ISPs can throttle speeds during peak hours (7-11 PM) or if you exceed data caps. Contact them if you suspect throttling, especially if speeds drop significantly at specific times daily."
+      },
+      {
+        "question": "Why is my internet slow only at night?",
+        "answer": "Network congestion during peak hours (7-11 PM) is most common. Everyone in your area uses internet simultaneously. Test at 6 AM vs 7 PM - if 50%+ difference, it's congestion."
+      }
+    ],
+    "statistics": {
+      "peakHourSlowdown": "30-60%",
+      "congestionHours": "7-11 PM",
+      "throttlingDetection": "Test same time daily for 1 week"
+    }
+  },
+  {
+    "keyword": "wifi slow but ethernet fast",
+    "volume": 15600,
+    "difficulty": 18,
+    "title": "WiFi Slow But Ethernet Fast? Here's Why & How to Fix It [2024]",
+    "description": "Fix WiFi speed issues when ethernet works fine. Step-by-step solutions for all router types, ISP-specific fixes, and hardware recommendations.",
+    "sections": [
+      "Why This Happens (Technical Explanation)",
+      "Router Configuration Fixes (All Brands)",
+      "WiFi Optimization Guide",
+      "Interference Solutions",
+      "When to Upgrade Hardware",
+      "ISP-Specific WiFi Issues"
+    ],
+    "related": [
+      "wifi slower than ethernet",
+      "ethernet faster than wifi", 
+      "wifi speed issues",
+      "router wifi slow",
+      "wifi not working but ethernet is"
+    ],
+    "faq": [
+      {
+        "question": "Why is my WiFi slower than ethernet?",
+        "answer": "WiFi is inherently slower due to signal interference, distance from router, and physical obstacles. Expect 10-30% slower speeds normally. If more than 50% slower, there's likely an issue."
+      },
+      {
+        "question": "How much slower should WiFi be than ethernet?",
+        "answer": "Expect WiFi to be 10-30% slower than ethernet under normal conditions. If it's more than 50% slower, there's likely an issue that needs fixing with router placement or configuration."
+      },
+      {
+        "question": "Should I upgrade my router for better WiFi?",
+        "answer": "Yes, if your router is more than 5 years old. WiFi 6 routers provide significantly better performance, range, and handle multiple devices more efficiently."
+      }
+    ],
+    "hardwareRecommendations": [
+      "WiFi 6 routers for better performance",
+      "Dual-band routers (2.4GHz + 5GHz)",
+      "Mesh systems for large homes",
+      "Router placement optimization"
+    ]
+  },
+  {
+    "keyword": "internet speed test accurate",
+    "volume": 8900,
+    "difficulty": 15,
+    "title": "Are Internet Speed Tests Accurate? The Truth About Testing [2024]",
+    "description": "Discover what affects speed test accuracy and how to get reliable results. Compare test methods, server locations, and ISP-specific testing.",
+    "sections": [
+      "What Affects Accuracy (7 Key Factors)",
+      "How to Test Correctly (Step-by-Step)",
+      "Different Test Methods Compared",
+      "When Tests Lie (Common Mistakes)",
+      "ISP-Specific Testing Considerations",
+      "Getting Reliable Results Every Time"
+    ],
+    "related": [
+      "speed test not accurate",
+      "different speed test results",
+      "accurate speed test",
+      "best internet speed test",
+      "speed test accuracy"
+    ],
+    "faq": [
+      {
+        "question": "Why do different speed tests show different results?",
+        "answer": "Different test servers, methods, and locations cause variations. Use same server location, test multiple times, and compare averages for accuracy."
+      },
+      {
+        "question": "Which speed test is most accurate?",
+        "answer": "Test multiple times with same conditions. Use our privacy-first test, Speedtest.net, and Fast.com. Average results for best accuracy."
+      },
+      {
+        "question": "When should I test my internet speed?",
+        "answer": "Test at different times: morning (best), evening (congestion), and multiple days. Avoid testing during downloads or updates."
+      }
+    ],
+    "testingMethods": [
+      "Multiple test services comparison",
+      "Same server location consistency",
+      "Multiple time periods testing",
+      "Ethernet vs WiFi differentiation"
+    ]
+  },
+  {
+    "keyword": "internet speed for streaming",
+    "volume": 23400,
+    "difficulty": 28,
+    "title": "Internet Speed for Streaming: Exact Requirements for Netflix, Hulu & More [2024]",
+    "description": "Exact internet speed requirements for Netflix, Hulu, YouTube, Disney+, Amazon Prime, and live streaming. Includes 4K requirements and multiple streams.",
+    "sections": [
+      "Netflix Speed Requirements (SD, HD, 4K, 8K)",
+      "Hulu, Disney+ & Amazon Prime Requirements",
+      "YouTube Streaming Speeds (All Qualities)",
+      "Live Streaming Requirements (Twitch, YouTube Live)",
+      "Multiple Streams Calculation",
+      "4K Streaming Specific Requirements"
+    ],
+    "related": [
+      "netflix speed requirements",
+      "streaming speed test", 
+      "4k streaming speed",
+      "hulu speed requirements",
+      "youtube streaming speed"
+    ],
+    "faq": [
+      {
+        "question": "How much speed do I need for 4K streaming?",
+        "answer": "You need 25 Mbps for one 4K stream. For multiple 4K streams, add 25 Mbps per stream. Netflix recommends 25 Mbps, Disney+ needs 25 Mbps, Amazon Prime requires 15 Mbps for 4K."
+      },
+      {
+        "question": "Can I stream Netflix with 10 Mbps?",
+        "answer": "Yes, 10 Mbps supports HD (1080p) Netflix streaming on one device. You'll need 25 Mbps for 4K Ultra HD. Multiple devices require more bandwidth."
+      },
+      {
+        "question": "Why does my streaming buffer even with good speed?",
+        "answer": "Buffering can be caused by network congestion, WiFi interference, or ISP throttling. Test with ethernet, try different times, and check for consistent speeds."
+      }
+    ],
+    "streamingRequirements": {
+      "Netflix": { "SD": "3 Mbps", "HD": "5 Mbps", "4K": "25 Mbps", "8K": "50 Mbps" },
+      "Disney+": { "SD": "3 Mbps", "HD": "5 Mbps", "4K": "25 Mbps" },
+      "Amazon Prime": { "SD": "1 Mbps", "HD": "3.5 Mbps", "4K": "15 Mbps" },
+      "YouTube": { "SD": "1 Mbps", "HD": "5 Mbps", "4K": "20 Mbps", "8K": "50 Mbps" },
+      "Hulu": { "SD": "3 Mbps", "HD": "8 Mbps", "4K": "16 Mbps" }
+    }
+  },
+  {
+    "keyword": "how to speed up internet",
+    "volume": 67300,
+    "difficulty": 42,
+    "title": "How to Speed Up Internet: 25 Proven Methods [2024 Guide]",
+    "description": "Speed up your internet connection with these proven methods. Works for all providers and connection types. Includes ISP-specific optimizations.",
+    "sections": [
+      "Quick Wins (5 minutes or less)",
+      "Router Optimization (All Brands Covered)",
+      "ISP-Specific Optimizations",
+      "Device-Specific Speed Ups",
+      "Advanced Technical Solutions",
+      "When to Upgrade vs Optimize"
+    ],
+    "related": [
+      "speed up wifi",
+      "make internet faster", 
+      "improve internet speed",
+      "how to make wifi faster",
+      "internet optimization"
+    ],
+    "faq": [
+      {
+        "question": "How can I speed up my internet for free?",
+        "answer": "Restart your router, optimize placement, close background apps, update firmware, and use ethernet when possible. These free fixes often improve speed by 20-40%."
+      },
+      {
+        "question": "Why is my internet still slow after trying everything?",
+        "answer": "You may need to upgrade your plan, replace old equipment (5+ years), or switch ISPs. Contact your ISP about plan upgrades or fiber availability in your area."
+      },
+      {
+        "question": "Should I upgrade my internet plan or try to optimize first?",
+        "answer": "Try optimization first - it costs nothing and often helps significantly. If speeds don't improve after optimization, then consider upgrading your plan."
+      }
+    ],
+    "optimizationTechniques": [
+      "Router firmware updates",
+      "Optimal router placement",
+      "QoS (Quality of Service) settings",
+      "DNS server optimization",
+      "Equipment age assessment"
+    ]
+  },
+  {
+    "keyword": "best time to test internet speed",
+    "volume": 3400,
+    "difficulty": 12,
+    "title": "Best Time to Test Internet Speed: When You'll Get Accurate Results [2024]",
+    "description": "Find the best time to test your internet speed for accurate results. Avoid peak hours and network congestion with this complete timing guide.",
+    "sections": [
+      "Why Timing Matters for Accuracy",
+      "Peak vs Off-Peak Hours Explained",
+      "Best Times by ISP (Xfinity, Spectrum, AT&T)",
+      "Optimal Testing Schedule",
+      "What Affects Test Timing",
+      "Getting Consistent Results"
+    ],
+    "related": [
+      "when to test internet speed",
+      "internet speed test time",
+      "accurate speed test time",
+      "best time for speed test",
+      "speed test timing"
+    ],
+    "faq": [
+      {
+        "question": "What time should I test my internet speed?",
+        "answer": "Test at 6-9 AM for best speeds, 7-11 PM for peak congestion impact, and multiple times for average. Avoid testing during downloads or updates."
+      },
+      {
+        "question": "Why are internet speeds slower at night?",
+        "answer": "Network congestion during peak hours (7-11 PM) when everyone streams. Test at 6 AM vs 7 PM - 30%+ difference indicates congestion issues."
+      },
+      {
+        "question": "How many times should I test my internet speed?",
+        "answer": "Test at least 3 times: morning, evening, and weekend. Average results for accuracy. Test multiple days if results vary significantly."
+      }
+    ],
+    "optimalTimes": {
+      "best": "6-9 AM",
+      "good": "12-5 PM", 
+      "avoid": "7-11 PM",
+      "weekend": "8-11 AM"
+    }
+  }
+]

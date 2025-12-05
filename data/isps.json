@@ -1,0 +1,125 @@
+[
+  {
+    "name": "Xfinity",
+    "type": "Cable",
+    "coverage": "Nationwide",
+    "plans": [
+      { "name": "Performance", "speed": 100, "price": 39.99, "type": "Cable", "upload": 5 },
+      { "name": "Blast!", "speed": 200, "price": 59.99, "type": "Cable", "upload": 10 },
+      { "name": "Extreme", "speed": 400, "price": 79.99, "type": "Cable", "upload": 10 },
+      { "name": "Gigabit", "speed": 1000, "price": 99.99, "type": "Cable", "upload": 35 }
+    ],
+    "support": "1-800-XFINITY",
+    "outageUrl": "https://xfinity.com/support/status",
+    "features": ["xFi Gateway", "Xfinity Stream", "Unlimited data option", "Xfinity WiFi hotspots"],
+    "commonIssues": ["Peak hour slowdowns", "Upload speed limitations", "Data cap overages", "Equipment rental fees"],
+    "markets": ["Northeast", "Mid-Atlantic", "Midwest", "West Coast"],
+    "customerRating": 3.2,
+    "technology": "DOCSIS 3.1"
+  },
+  {
+    "name": "Spectrum",
+    "type": "Cable", 
+    "coverage": "Nationwide",
+    "plans": [
+      { "name": "Internet", "speed": 100, "price": 49.99, "type": "Cable", "upload": 10 },
+      { "name": "Internet Ultra", "speed": 400, "price": 69.99, "type": "Cable", "upload": 20 },
+      { "name": "Internet Gig", "speed": 940, "price": 89.99, "type": "Cable", "upload": 35 }
+    ],
+    "support": "1-855-707-7328",
+    "outageUrl": "https://spectrum.com/support/internet",
+    "features": ["Free modem", "No data caps", "Spectrum TV app", "Contract-free options"],
+    "commonIssues": ["Peak hour congestion", "Upload speed disparity", "Equipment rental fees", "Service transfer issues"],
+    "markets": ["Northeast", "Southeast", "Midwest", "West Coast"],
+    "customerRating": 3.4,
+    "technology": "DOCSIS 3.1"
+  },
+  {
+    "name": "AT&T",
+    "type": "Mixed",
+    "coverage": "Nationwide",
+    "plans": [
+      { "name": "Internet 100", "speed": 100, "price": 55.00, "type": "IPBB", "upload": 20 },
+      { "name": "Internet 300", "speed": 300, "price": 65.00, "type": "Fiber", "upload": 300 },
+      { "name": "Internet 500", "speed": 500, "price": 75.00, "type": "Fiber", "upload": 500 },
+      { "name": "Internet 1000", "speed": 1000, "price": 85.00, "type": "Fiber", "upload": 1000 }
+    ],
+    "support": "1-800-288-2020",
+    "outageUrl": "https://att.com/support/availability",
+    "features": ["Smart Home Manager", "AT&T TV", "Fiber where available", "No data caps on fiber"],
+    "commonIssues": ["Fiber availability limited", "IPBB speed variations", "Installation delays", "Contract requirements"],
+    "markets": ["South", "Midwest", "California", "Texas"],
+    "customerRating": 3.6,
+    "technology": "Fiber/DSL/IPBB"
+  },
+  {
+    "name": "Verizon Fios",
+    "type": "Fiber",
+    "coverage": "Select Markets",
+    "plans": [
+      { "name": "200/200", "speed": 200, "price": 49.99, "type": "Fiber", "upload": 200 },
+      { "name": "400/400", "speed": 400, "price": 69.99, "type": "Fiber", "upload": 400 },
+      { "name": "Gigabit Connection", "speed": 940, "price": 89.99, "type": "Fiber", "upload": 940 }
+    ],
+    "support": "1-800-VERIZON",
+    "outageUrl": "https://verizon.com/support/outages",
+    "features": ["Symmetrical speeds", "No data caps", "Verizon Smart Family", "Best upload speeds"],
+    "commonIssues": ["Limited availability", "High installation fees", "Contract requirements", "Slow expansion"],
+    "markets": ["Northeast", "Mid-Atlantic"],
+    "customerRating": 4.0,
+    "technology": "GPON Fiber"
+  },
+  {
+    "name": "CenturyLink",
+    "type": "Mixed",
+    "coverage": "Nationwide",
+    "plans": [
+      { "name": "Internet", "speed": 100, "price": 49.00, "type": "DSL", "upload": 10 },
+      { "name": "Fiber Internet", "speed": 940, "price": 65.00, "type": "Fiber", "upload": 940 }
+    ],
+    "support": "1-800-244-1111",
+    "outageUrl": "https://centurylink.com/help",
+    "features": ["Price for Life", "No contract", "Fiber in select areas", "No data caps"],
+    "commonIssues": ["DSL speed limitations", "Fiber availability", "Customer service", "Slow installation"],
+    "markets": ["Midwest", "West", "South"],
+    "customerRating": 3.1,
+    "technology": "Fiber/DSL"
+  },
+  {
+    "name": "Cox",
+    "type": "Cable",
+    "coverage": "Select Markets",
+    "plans": [
+      { "name": "Starter 25", "speed": 25, "price": 29.99, "type": "Cable", "upload": 3 },
+      { "name": "Essential 50", "speed": 50, "price": 39.99, "type": "Cable", "upload": 5 },
+      { "name": "Preferred 150", "speed": 150, "price": 59.99, "type": "Cable", "upload": 10 },
+      { "name": "Ultimate 500", "speed": 500, "price": 79.99, "type": "Cable", "upload": 10 },
+      { "name": "Gigablast", "speed": 1000, "price": 99.99, "type": "Cable", "upload": 35 }
+    ],
+    "support": "1-800-234-3993",
+    "outageUrl": "https://cox.com/residential/support.html",
+    "features": ["Panoramic WiFi", "Cox Homelife", "No contract options", "Data usage tools"],
+    "commonIssues": ["Data caps on lower tiers", "Peak hour slowdowns", "Equipment rental fees", "Upload speed limitations"],
+    "markets": ["Southwest", "Southeast", "California"],
+    "customerRating": 3.3,
+    "technology": "DOCSIS 3.1"
+  },
+  {
+    "name": "Google Fiber",
+    "type": "Fiber",
+    "coverage": "Select Markets",
+    "plans": [
+      { "name": "Fiber 100", "speed": 100, "price": 50.00, "type": "Fiber", "upload": 100 },
+      { "name": "Fiber 500", "speed": 500, "price": 65.00, "type": "Fiber", "upload": 500 },
+      { "name": "Fiber 1000", "speed": 1000, "price": 70.00, "type": "Fiber", "upload": 1000 },
+      { "name": "Fiber 2000", "speed": 2000, "price": 100.00, "type": "Fiber", "upload": 2000 }
+    ],
+    "support": "1-844-363-4237",
+    "outageUrl": "https://fiber.google.com/support/",
+    "features": ["No data caps", "No contracts", "Symmetric speeds", "Google One included", "Best value"],
+    "commonIssues": ["Limited availability", "Long installation waits", "Service area restrictions", "Slow expansion"],
+    "markets": ["Kansas City", "Austin", "Atlanta", "Nashville", "Salt Lake City"],
+    "customerRating": 4.2,
+    "technology": "GPON Fiber"
+  }
+]

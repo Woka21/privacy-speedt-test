@@ -1,0 +1,309 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .speed-test-card {
+        padding: 2rem;
+    }
+    
+    .results-main-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .primary-card {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 0;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .main {
+        padding: 2rem 0;
+    }
+    
+    .speed-test-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .primary-button {
+        padding: 0.875rem 2rem;
+        font-size: 1.1rem;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .results-main-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .speed-card {
+        padding: 1.5rem;
+    }
+    
+    .gauge-svg {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .small-gauge .gauge-svg {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .gauge-value {
+        font-size: 2rem;
+    }
+    
+    .gauge-value.small {
+        font-size: 1.5rem;
+    }
+    
+    .results-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .action-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+    
+    .modal-actions button {
+        width: 100%;
+    }
+    
+    .speed-table {
+        font-size: 0.9rem;
+    }
+    
+    .speed-table th,
+    .speed-table td {
+        padding: 0.75rem;
+    }
+    
+    .faq-item summary {
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .faq-content {
+        padding: 0 1.25rem 1.25rem;
+    }
+    
+    /* New responsive styles for enhanced interface */
+    .analysis-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-item {
+        grid-template-columns: 100px 1fr 60px;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+    }
+    
+    .social-button {
+        width: 100%;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .speed-test-card {
+        padding: 1rem;
+    }
+    
+    .results-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .speed-card {
+        padding: 1rem;
+    }
+    
+    .gauge-svg {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .small-gauge .gauge-svg {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .gauge-value {
+        font-size: 1.8rem;
+    }
+    
+    .gauge-value.small {
+        font-size: 1.4rem;
+    }
+    
+    .detailed-analysis,
+    .speed-comparison {
+        padding: 1.5rem;
+    }
+    
+    .analysis-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Large mobile devices (landscape) */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        padding: 1rem 0;
+    }
+    
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .speed-test-card {
+        padding: 1.5rem;
+    }
+    
+    .results-main-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .gauge-value {
+        font-size: 2rem;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .result-icon {
+        font-size: 3rem;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .result-card:hover,
+    .content-card:hover,
+    .primary-button:hover,
+    .speed-card:hover {
+        transform: none !important;
+    }
+    
+    .gauge-fill {
+        transition: none !important;
+    }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0f172a;
+        --card-background: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --border-color: #334155;
+    }
+    
+    .progress-fill {
+        background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    }
+    
+    .gauge-bg {
+        stroke: rgba(255, 255, 255, 0.1);
+    }
+    
+    .analysis-card {
+        background: #1e293b;
+    }
+    
+    .chart-bar-container {
+        background: #1e293b;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .footer,
+    .modal,
+    button {
+        display: none;
+    }
+    
+    .speed-test-card,
+    .detailed-analysis,
+    .speed-comparison,
+    .content-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .result-card {
+        background: #f5f5f5;
+    }
+    
+    .gauge-fill {
+        stroke: #333 !important;
+    }
+}

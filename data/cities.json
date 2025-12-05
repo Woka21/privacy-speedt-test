@@ -1,0 +1,482 @@
+[
+  {
+    "name": "New York",
+    "state": "NY",
+    "population": 8336817,
+    "avgSpeed": 142,
+    "isps": ["Verizon Fios", "Spectrum", "Optimum"],
+    "zipCodes": ["10001", "10002", "10003"],
+    "lat": 40.7128,
+    "lng": -74.0060
+  },
+  {
+    "name": "Los Angeles",
+    "state": "CA",
+    "population": 3979576,
+    "avgSpeed": 138,
+    "isps": ["Spectrum", "AT&T", "Frontier"],
+    "zipCodes": ["90001", "90002", "90003"],
+    "lat": 34.0522,
+    "lng": -118.2437
+  },
+  {
+    "name": "Chicago",
+    "state": "IL",
+    "population": 2693976,
+    "avgSpeed": 145,
+    "isps": ["Xfinity", "AT&T", "Spectrum"],
+    "zipCodes": ["60601", "60602", "60603"],
+    "lat": 41.8781,
+    "lng": -87.6298
+  },
+  {
+    "name": "Houston",
+    "state": "TX",
+    "population": 2320268,
+    "avgSpeed": 135,
+    "isps": ["Xfinity", "AT&T", "Spectrum"],
+    "zipCodes": ["77001", "77002", "77003"],
+    "lat": 29.7604,
+    "lng": -95.3698
+  },
+  {
+    "name": "Phoenix",
+    "state": "AZ",
+    "population": 1680992,
+    "avgSpeed": 128,
+    "isps": ["Cox", "CenturyLink", "Spectrum"],
+    "zipCodes": ["85001", "85002", "85003"],
+    "lat": 33.4484,
+    "lng": -112.0740
+  },
+  {
+    "name": "Philadelphia",
+    "state": "PA",
+    "population": 1584064,
+    "avgSpeed": 140,
+    "isps": ["Xfinity", "Verizon", "AT&T"],
+    "zipCodes": ["19101", "19102", "19103"],
+    "lat": 39.9526,
+    "lng": -75.1652
+  },
+  {
+    "name": "San Antonio",
+    "state": "TX",
+    "population": 1547253,
+    "avgSpeed": 132,
+    "isps": ["Spectrum", "AT&T", "Grande"],
+    "zipCodes": ["78201", "78202", "78203"],
+    "lat": 29.4241,
+    "lng": -98.4936
+  },
+  {
+    "name": "San Diego",
+    "state": "CA",
+    "population": 1423851,
+    "avgSpeed": 141,
+    "isps": ["Spectrum", "AT&T", "Cox"],
+    "zipCodes": ["92101", "92102", "92103"],
+    "lat": 32.7157,
+    "lng": -117.1611
+  },
+  {
+    "name": "Dallas",
+    "state": "TX",
+    "population": 1343573,
+    "avgSpeed": 139,
+    "isps": ["Spectrum", "AT&T", "Frontier"],
+    "zipCodes": ["75201", "75202", "75203"],
+    "lat": 32.7767,
+    "lng": -96.7970
+  },
+  {
+    "name": "San Jose",
+    "state": "CA",
+    "population": 1021795,
+    "avgSpeed": 155,
+    "isps": ["Xfinity", "AT&T", "Spectrum"],
+    "zipCodes": ["95101", "95102", "95103"],
+    "lat": 37.3382,
+    "lng": -121.4944
+  },
+  {
+    "name": "Austin",
+    "state": "TX",
+    "population": 978908,
+    "avgSpeed": 147,
+    "isps": ["Spectrum", "AT&T", "Google Fiber"],
+    "zipCodes": ["78701", "78702", "78703"],
+    "lat": 30.2672,
+    "lng": -97.7431
+  },
+  {
+    "name": "Jacksonville",
+    "state": "FL",
+    "population": 911507,
+    "avgSpeed": 133,
+    "isps": ["Xfinity", "AT&T", "Spectrum"],
+    "zipCodes": ["32201", "32202", "32203"],
+    "lat": 30.3322,
+    "lng": -81.6557
+  },
+  {
+    "name": "Fort Worth",
+    "state": "TX",
+    "population": 909585,
+    "avgSpeed": 136,
+    "isps": ["Spectrum", "AT&T", "Frontier"],
+    "zipCodes": ["76101", "76102", "76103"],
+    "lat": 32.7555,
+    "lng": -97.3308
+  },
+  {
+    "name": "Columbus",
+    "state": "OH",
+    "population": 898553,
+    "avgSpeed": 138,
+    "isps": ["Spectrum", "AT&T", "WOW!"],
+    "zipCodes": ["43201", "43202", "43203"],
+    "lat": 39.9612,
+    "lng": -82.9988
+  },
+  {
+    "name": "Charlotte",
+    "state": "NC",
+    "population": 885708,
+    "avgSpeed": 142,
+    "isps": ["Spectrum", "AT&T", "Google Fiber"],
+    "zipCodes": ["28201", "28202", "28203"],
+    "lat": 35.2271,
+    "lng": -80.8431
+  },
+  {
+    "name": "San Francisco",
+    "state": "CA",
+    "population": 873965,
+    "avgSpeed": 159,
+    "isps": ["Xfinity", "AT&T", "Sonic"],
+    "zipCodes": ["94101", "94102", "94103"],
+    "lat": 37.7749,
+    "lng": -122.4194
+  },
+  {
+    "name": "Indianapolis",
+    "state": "IN",
+    "population": 876384,
+    "avgSpeed": 134,
+    "isps": ["Xfinity", "AT&T", "Spectrum"],
+    "zipCodes": ["46201", "46202", "46203"],
+    "lat": 39.7684,
+    "lng": -86.1581
+  },
+  {
+    "name": "Seattle",
+    "state": "WA",
+    "population": 753675,
+    "avgSpeed": 152,
+    "isps": ["Xfinity", "CenturyLink", "Wave"],
+    "zipCodes": ["98101", "98102", "98103"],
+    "lat": 47.6062,
+    "lng": -122.3321
+  },
+  {
+    "name": "Denver",
+    "state": "CO",
+    "population": 727211,
+    "avgSpeed": 143,
+    "isps": ["Xfinity", "CenturyLink", "Spectrum"],
+    "zipCodes": ["80201", "80202", "80203"],
+    "lat": 39.7392,
+    "lng": -104.9903
+  },
+  {
+    "name": "Washington",
+    "state": "DC",
+    "population": 705749,
+    "avgSpeed": 148,
+    "isps": ["Xfinity", "Verizon", "RCN"],
+    "zipCodes": ["20001", "20002", "20003"],
+    "lat": 38.9072,
+    "lng": -77.0369
+  },
+  {
+    "name": "Boston",
+    "state": "MA",
+    "population": 692600,
+    "avgSpeed": 151,
+    "isps": ["Xfinity", "Verizon", "RCN"],
+    "zipCodes": ["02101", "02102", "02103"],
+    "lat": 42.3601,
+    "lng": -71.0589
+  },
+  {
+    "name": "El Paso",
+    "state": "TX",
+    "population": 681728,
+    "avgSpeed": 125,
+    "isps": ["Spectrum", "AT&T", "CenturyLink"],
+    "zipCodes": ["79901", "79902", "79903"],
+    "lat": 31.7619,
+    "lng": -106.4850
+  },
+  {
+    "name": "Nashville",
+    "state": "TN",
+    "population": 670820,
+    "avgSpeed": 139,
+    "isps": ["Xfinity", "AT&T", "Google Fiber"],
+    "zipCodes": ["37201", "37202", "37203"],
+    "lat": 36.1627,
+    "lng": -86.7816
+  },
+  {
+    "name": "Detroit",
+    "state": "MI",
+    "population": 670031,
+    "avgSpeed": 129,
+    "isps": ["Xfinity", "AT&T", "Spectrum"],
+    "zipCodes": ["48201", "48202", "48203"],
+    "lat": 42.3314,
+    "lng": -83.0458
+  },
+  {
+    "name": "Oklahoma City",
+    "state": "OK",
+    "population": 655057,
+    "avgSpeed": 131,
+    "isps": ["Cox", "AT&T", "Spectrum"],
+    "zipCodes": ["73101", "73102", "73103"],
+    "lat": 35.4676,
+    "lng": -97.5164
+  },
+  {
+    "name": "Portland",
+    "state": "OR",
+    "population": 654741,
+    "avgSpeed": 149,
+    "isps": ["Xfinity", "CenturyLink", "Spectrum"],
+    "zipCodes": ["97201", "97202", "97203"],
+    "lat": 45.5152,
+    "lng": -122.6784
+  },
+  {
+    "name": "Las Vegas",
+    "state": "NV",
+    "population": 651319,
+    "avgSpeed": 141,
+    "isps": ["Cox", "CenturyLink", "Spectrum"],
+    "zipCodes": ["89101", "89102", "89103"],
+    "lat": 36.1699,
+    "lng": -115.1398
+  },
+  {
+    "name": "Memphis",
+    "state": "TN",
+    "population": 651073,
+    "avgSpeed": 127,
+    "isps": ["Xfinity", "AT&T", "Spectrum"],
+    "zipCodes": ["38101", "38102", "38103"],
+    "lat": 35.1495,
+    "lng": -90.0490
+  },
+  {
+    "name": "Louisville",
+    "state": "KY",
+    "population": 617638,
+    "avgSpeed": 133,
+    "isps": ["Spectrum", "AT&T", "Google Fiber"],
+    "zipCodes": ["40201", "40202", "40203"],
+    "lat": 38.2527,
+    "lng": -85.7585
+  },
+  {
+    "name": "Baltimore",
+    "state": "MD",
+    "population": 593490,
+    "avgSpeed": 137,
+    "isps": ["Xfinity", "Verizon", "Atlantic Broadband"],
+    "zipCodes": ["21201", "21202", "21203"],
+    "lat": 39.2904,
+    "lng": -76.6122
+  },
+  {
+    "name": "Milwaukee",
+    "state": "WI",
+    "population": 590157,
+    "avgSpeed": 135,
+    "isps": ["Spectrum", "AT&T", "Verizon"],
+    "zipCodes": ["53201", "53202", "53203"],
+    "lat": 43.0389,
+    "lng": -87.9065
+  },
+  {
+    "name": "Albuquerque",
+    "state": "NM",
+    "population": 564559,
+    "avgSpeed": 126,
+    "isps": ["Xfinity", "CenturyLink", "Spectrum"],
+    "zipCodes": ["87101", "87102", "87103"],
+    "lat": 35.0844,
+    "lng": -106.6504
+  },
+  {
+    "name": "Tucson",
+    "state": "AZ",
+    "population": 548073,
+    "avgSpeed": 128,
+    "isps": ["Xfinity", "CenturyLink", "Spectrum"],
+    "zipCodes": ["85701", "85702", "85703"],
+    "lat": 32.2226,
+    "lng": -110.9747
+  },
+  {
+    "name": "Sacramento",
+    "state": "CA",
+    "population": 513624,
+    "avgSpeed": 143,
+    "isps": ["Xfinity", "AT&T", "Spectrum"],
+    "zipCodes": ["95801", "95802", "95803"],
+    "lat": 38.5816,
+    "lng": -121.4944
+  },
+  {
+    "name": "Kansas City",
+    "state": "MO",
+    "population": 495327,
+    "avgSpeed": 144,
+    "isps": ["Xfinity", "AT&T", "Google Fiber"],
+    "zipCodes": ["64101", "64102", "64103"],
+    "lat": 39.0997,
+    "lng": -94.5786
+  },
+  {
+    "name": "Mesa",
+    "state": "AZ",
+    "population": 508958,
+    "avgSpeed": 134,
+    "isps": ["Cox", "CenturyLink", "Spectrum"],
+    "zipCodes": ["85201", "85202", "85203"],
+    "lat": 33.4152,
+    "lng": -111.8315
+  },
+  {
+    "name": "Atlanta",
+    "state": "GA",
+    "population": 506811,
+    "avgSpeed": 146,
+    "isps": ["Xfinity", "AT&T", "Google Fiber"],
+    "zipCodes": ["30301", "30302", "30303"],
+    "lat": 33.7490,
+    "lng": -84.3880
+  },
+  {
+    "name": "Colorado Springs",
+    "state": "CO",
+    "population": 478221,
+    "avgSpeed": 138,
+    "isps": ["Xfinity", "CenturyLink", "Spectrum"],
+    "zipCodes": ["80901", "80902", "80903"],
+    "lat": 38.8339,
+    "lng": -104.8214
+  },
+  {
+    "name": "Virginia Beach",
+    "state": "VA",
+    "population": 459470,
+    "avgSpeed": 136,
+    "isps": ["Cox", "Verizon", "Spectrum"],
+    "zipCodes": ["23451", "23452", "23453"],
+    "lat": 36.8529,
+    "lng": -75.9780
+  },
+  {
+    "name": "Raleigh",
+    "state": "NC",
+    "population": 474069,
+    "avgSpeed": 143,
+    "isps": ["Spectrum", "AT&T", "Google Fiber"],
+    "zipCodes": ["27601", "27602", "27603"],
+    "lat": 35.7796,
+    "lng": -78.6382
+  },
+  {
+    "name": "Omaha",
+    "state": "NE",
+    "population": 486051,
+    "avgSpeed": 137,
+    "isps": ["Cox", "CenturyLink", "Spectrum"],
+    "zipCodes": ["68101", "68102", "68103"],
+    "lat": 41.2565,
+    "lng": -95.9345
+  },
+  {
+    "name": "Miami",
+    "state": "FL",
+    "population": 467963,
+    "avgSpeed": 142,
+    "isps": ["Xfinity", "AT&T", "Atlantic Broadband"],
+    "zipCodes": ["33101", "33102", "33103"],
+    "lat": 25.7617,
+    "lng": -80.1918
+  },
+  {
+    "name": "Oakland",
+    "state": "CA",
+    "population": 433031,
+    "avgSpeed": 151,
+    "isps": ["Xfinity", "AT&T", "Sonic"],
+    "zipCodes": ["94601", "94602", "94603"],
+    "lat": 37.8044,
+    "lng": -122.2712
+  },
+  {
+    "name": "Minneapolis",
+    "state": "MN",
+    "population": 429606,
+    "avgSpeed": 144,
+    "isps": ["Xfinity", "CenturyLink", "US Internet"],
+    "zipCodes": ["55401", "55402", "55403"],
+    "lat": 44.9778,
+    "lng": -93.2650
+  },
+  {
+    "name": "Tulsa",
+    "state": "OK",
+    "population": 403492,
+    "avgSpeed": 131,
+    "isps": ["Cox", "AT&T", "Spectrum"],
+    "zipCodes": ["74101", "74102", "74103"],
+    "lat": 36.1540,
+    "lng": -95.9928
+  },
+  {
+    "name": "Arlington",
+    "state": "TX",
+    "population": 398854,
+    "avgSpeed": 135,
+    "isps": ["Spectrum", "AT&T", "Frontier"],
+    "zipCodes": ["76001", "76002", "76003"],
+    "lat": 32.7357,
+    "lng": -97.1081
+  },
+  {
+    "name": "New Orleans",
+    "state": "LA",
+    "population": 390144,
+    "avgSpeed": 133,
+    "isps": ["Cox", "AT&T", "Spectrum"],
+    "zipCodes": ["70112", "70113", "70114"],
+    "lat": 29.9511,
+    "lng": -90.0715
+  },
+  {
+    "name": "Wichita",
+    "state": "KS",
+    "population": 389255,
+    "avgSpeed": 129,
+    "isps": ["Cox", "AT&T", "Spectrum"],
+    "zipCodes": ["67201", "67202", "67203"],
+    "lat": 37.6872,
+    "lng": -97.3301
+  }
+]

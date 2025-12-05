@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Internet Speed Test Tulsa | Check Your Connection in OK</title>
+    <meta name="description" content="Test your internet speed in Tulsa, OK. Compare results with Cox, AT&T, Spectrum and see how your connection stacks up against the 131 Mbps city average.">
+    <meta name="keywords" content="tulsa internet speed test, speed test tulsa, cox tulsa, at&t tulsa, spectrum tulsa, internet speed tulsa, broadband speed test tulsa">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yoursite.com/content/locations/speed-test-tulsa.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Internet Speed Test Tulsa | OK">
+    <meta property="og:description" content="Test your internet speed in Tulsa, OK. Average speed: 131 Mbps.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/content/locations/speed-test-tulsa.html">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Internet Speed Test Tulsa",
+        "description": "Test internet speed in Tulsa, OK",
+        "applicationCategory": "UtilityApplication",
+        "offers": {"@type": "Offer", "price": "0"},
+        "areaServed": {
+            "@type": "City",
+            "name": "Tulsa",
+            "containedInPlace": {
+                "@type": "State",
+                "name": "OK"
+            }
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Privacy Speed Test"
+        }
+    }
+    </script>
+    
+    <!-- Favicon and PWA -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>🛡️ Internet Speed Test Tulsa</h1>
+            <p class="subtitle">Test your connection in Tulsa, OK • Compare with local ISPs</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="speed-test-card">
+                <div id="test-interface">
+                    <button id="start-test" class="primary-button">
+                        <span>🚀 Test Tulsa Speed</span>
+                    </button>
+                    <p class="privacy-note">✈️ All testing happens in your browser • No data collection</p>
+                </div>
+
+                <div id="test-progress" class="hidden">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">Initializing test...</div>
+                </div>
+
+                <!-- Enhanced Results Interface -->
+                <div id="results-container" class="hidden">
+                    <div class="results-header">
+                        <h2>Your Tulsa Internet Speed Results</h2>
+                        <div class="results-timestamp" id="results-time"></div>
+                    </div>
+                    
+                    <div class="results-main-grid">
+                        <!-- Download Speed - Featured -->
+                        <div class="speed-card primary-card">
+                            <div class="speed-gauge">
+                                <svg class="gauge-svg" viewBox="0 0 120 120">
+                                    <circle class="gauge-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="gauge-fill download-gauge" cx="60" cy="60" r="54"></circle>
+                                    <text class="gauge-value" x="60" y="60" text-anchor="middle" id="download-gauge-text">0</text>
+                                    <text class="gauge-unit" x="60" y="75" text-anchor="middle">Mbps</text>
+                                </svg>
+                            </div>
+                            <div class="speed-info">
+                                <div class="speed-label">Download Speed</div>
+                                <div class="speed-description">How fast you receive data</div>
+                                <div class="speed-rating rating-excellent" id="download-rating">Excellent</div>
+                            </div>
+                            <div class="speed-capabilities">
+                                <div class="capability-item">✅ HD Streaming</div>
+                                <div class="capability-item">✅ 4K Streaming</div>
+                                <div class="capability-item">✅ Gaming</div>
+                            </div>
+                        </div>
+
+                        <!-- Upload Speed -->
+                        <div class="speed-card secondary-card">
+                            <div class="speed-gauge small-gauge">
+                                <svg class="gauge-svg" viewBox="0 0 100 100">
+                                    <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="gauge-fill upload-gauge" cx="50" cy="50" r="45"></circle>
+                                    <text class="gauge-value small" x="50" y="50" text-anchor="middle" id="upload-gauge-text">0</text>
+                                    <text class="gauge-unit small" x="50" y="62" text-anchor="middle">Mbps</text>
+                                </svg>
+                            </div>
+                            <div class="speed-info">
+                                <div class="speed-label">Upload Speed</div>
+                                <div class="speed-description">How fast you send data</div>
+                                <div class="speed-rating rating-good" id="upload-rating">Good</div>
+                            </div>
+                        </div>
+
+                        <!-- Ping -->
+                        <div class="speed-card tertiary-card">
+                            <div class="speed-gauge small-gauge">
+                                <svg class="gauge-svg" viewBox="0 0 100 100">
+                                    <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="gauge-fill ping-gauge" cx="50" cy="50" r="45"></circle>
+                                    <text class="gauge-value small" x="50" y="50" text-anchor="middle" id="ping-gauge-text">0</text>
+                                    <text class="gauge-unit small" x="50" y="62" text-anchor="middle">ms</text>
+                                </svg>
+                            </div>
+                            <div class="speed-info">
+                                <div class="speed-label">Ping</div>
+                                <div class="speed-description">Response time</div>
+                                <div class="speed-rating rating-excellent" id="ping-rating">Excellent</div>
+                            </div>
+                        </div>
+
+                        <!-- Jitter -->
+                        <div class="speed-card quaternary-card">
+                            <div class="speed-gauge small-gauge">
+                                <svg class="gauge-svg" viewBox="0 0 100 100">
+                                    <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="gauge-fill jitter-gauge" cx="50" cy="50" r="45"></circle>
+                                    <text class="gauge-value small" x="50" y="50" text-anchor="middle" id="jitter-gauge-text">0</text>
+                                    <text class="gauge-unit small" x="50" y="62" text-anchor="middle">ms</text>
+                                </svg>
+                            </div>
+                            <div class="speed-info">
+                                <div class="speed-label">Jitter</div>
+                                <div class="speed-description">Stability</div>
+                                <div class="speed-rating rating-stable" id="jitter-rating">Stable</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Analysis -->
+                    <div class="detailed-analysis">
+                        <div class="analysis-header">
+                            <h3>📊 Detailed Analysis</h3>
+                            <div class="connection-type" id="connection-type">Fiber Connection</div>
+                        </div>
+                        
+                        <div class="analysis-grid">
+                            <div class="analysis-card">
+                                <h4>🎬 Streaming Capabilities</h4>
+                                <div class="capability-list" id="streaming-capabilities">
+                                    <div class="capability-item">✅ Netflix HD (5 Mbps needed)</div>
+                                    <div class="capability-item">✅ Netflix 4K (25 Mbps needed)</div>
+                                    <div class="capability-item">✅ YouTube HD</div>
+                                    <div class="capability-item">✅ Multiple streams</div>
+                                </div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <h4>💬 Video Call Quality</h4>
+                                <div class="capability-list" id="video-call-capabilities">
+                                    <div class="capability-item">✅ Zoom HD (3 Mbps needed)</div>
+                                    <div class="capability-item">✅ Teams HD (3 Mbps needed)</div>
+                                    <div class="capability-item">✅ Google Meet HD</div>
+                                    <div class="capability-item">❌ Multiple HD calls</div>
+                                </div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <h4>🎮 Gaming Performance</h4>
+                                <div class="capability-list" id="gaming-capabilities">
+                                    <div class="capability-item">✅ Online gaming (25 Mbps needed)</div>
+                                    <div class="capability-item">✅ Game downloads</div>
+                                    <div class="capability-item">✅ Streaming gameplay</div>
+                                    <div class="capability-item" id="ping-gaming">✅ Low latency gaming</div>
+                                </div>
+                            </div>
+                            
+                            <div class="analysis-card">
+                                <h4>☁️ Cloud & Upload Tasks</h4>
+                                <div class="capability-list" id="upload-capabilities">
+                                    <div class="capability-item">✅ Photo uploads</div>
+                                    <div class="capability-item">✅ Cloud backups</div>
+                                    <div class="capability-item">✅ File sharing</div>
+                                    <div class="capability-item">❌ Large video uploads</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Speed Comparison -->
+                    <div class="speed-comparison">
+                        <h3>📈 How Do You Compare?</h3>
+                        <div class="comparison-chart">
+                            <div class="chart-item">
+                                <div class="chart-label">Your Speed</div>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar your-speed" id="download-comparison-bar"></div>
+                                </div>
+                                <div class="chart-value" id="your-download-value">0 Mbps</div>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-label">City Average</div>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar city-average" id="city-comparison-bar"></div>
+                                </div>
+                                <div class="chart-value" id="city-download-value">131 Mbps</div>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-label">National Average</div>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar national-average" id="national-comparison-bar"></div>
+                                </div>
+                                <div class="chart-value" id="national-download-value">132 Mbps</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Local Context -->
+                    <div class="local-context-section">
+                        <h3>📍 Tulsa Internet Context</h3>
+                        <div class="local-stats">
+                            <p><strong>Average speed in Tulsa:</strong> 131 Mbps</p>
+                            <p><strong>Population:</strong> 403,492 residents</p>
+                            <p><strong>Major providers:</strong> Cox, AT&T, Spectrum</p>
+                        </div>
+                        <div class="local-comparison">
+                            <p>Compare your results with other Tulsa residents:</p>
+                            <div class="comparison-meter">
+                                <div class="meter-fill" style="width: 65.5%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="results-actions">
+                        <button id="share-results-new" class="action-button primary-action">
+                            <span>📤 Share Results</span>
+                        </button>
+                        <button id="test-again-new" class="action-button secondary-action">
+                            <span>🔄 Test Again</span>
+                        </button>
+                        <button id="save-results" class="action-button tertiary-action">
+                            <span>💾 Save Results</span>
+                        </button>
+                    </div>
+
+                    <!-- Enhanced Share Modal -->
+                    <div id="share-modal-new" class="modal hidden">
+                        <div class="modal-overlay"></div>
+                        <div class="modal-content share-modal-content">
+                            <h3>Share Your Speed Test Results</h3>
+                            <div class="share-preview">
+                                <div class="share-result-summary">
+                                    <div class="share-speed">🔥 <span id="share-download-speed">0</span> Mbps</div>
+                                    <div class="share-text">My internet speed test results!</div>
+                                </div>
+                            </div>
+                            <input type="text" id="share-link-new" readonly>
+                            <div class="modal-actions">
+                                <button id="copy-link-new" class="primary-button">Copy Link</button>
+                                <button id="close-modal-new" class="secondary-button">Close</button>
+                            </div>
+                            <div class="share-social">
+                                <p>Or share on:</p>
+                                <div class="social-buttons">
+                                    <button class="social-button twitter">Twitter</button>
+                                    <button class="social-button facebook">Facebook</button>
+                                    <button class="social-button reddit">Reddit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keep existing SEO sections -->
+                <section class="seo-content">
+                    <h2>Understanding Your Internet Speed Results</h2>
+                    <div class="content-grid">
+                        <article class="content-card">
+                            <h3>⬇️ Download Speed</h3>
+                            <p>How fast data comes to your device. You need:</p>
+                            <ul class="speed-list">
+                                <li>3+ Mbps for HD Netflix</li>
+                                <li>25+ Mbps for 4K Netflix</li>
+                                <li>100+ Mbps for large downloads</li>
+                            </ul>
+                        </article>
+                        <article class="content-card">
+                            <h3>⬆️ Upload Speed</h3>
+                            <p>How fast you send data. You need:</p>
+                            <ul class="speed-list">
+                                <li>1+ Mbps for basic video calls</li>
+                                <li>3+ Mbps for HD video calls</li>
+                                <li>10+ Mbps for live streaming</li>
+                            </ul>
+                        </article>
+                        <article class="content-card">
+                            <h3>⚡ Ping & Jitter</h3>
+                            <p>Response time and stability. You need:</p>
+                            <ul class="speed-list">
+                                <li>&lt;50ms ping for smooth gaming</li>
+                                <li>&lt;100ms ping for video calls</li>
+                                <li>&lt;30ms jitter for stability</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Speed Requirements Table -->
+                <section class="requirements-section">
+                    <h2>Internet Speed Requirements by Activity</h2>
+                    <div class="table-container">
+                        <table class="speed-table">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Minimum Speed</th>
+                                    <th>Recommended</th>
+                                    <th>Optimal Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>📺 Netflix HD</td>
+                                    <td>3 Mbps</td>
+                                    <td>5 Mbps</td>
+                                    <td>25+ Mbps</td>
+                                </tr>
+                                <tr>
+                                    <td>📺 Netflix 4K</td>
+                                    <td>25 Mbps</td>
+                                    <td>50 Mbps</td>
+                                    <td>100+ Mbps</td>
+                                </tr>
+                                <tr>
+                                    <td>💬 Zoom/Video Calls</td>
+                                    <td>1 Mbps</td>
+                                    <td>3 Mbps</td>
+                                    <td>10+ Mbps</td>
+                                </tr>
+                                <tr>
+                                    <td>🎮 Online Gaming</td>
+                                    <td>3 Mbps</td>
+                                    <td>25 Mbps</td>
+                                    <td>100+ Mbps</td>
+                                </tr>
+                                <tr>
+                                    <td>📱 Social Media</td>
+                                    <td>1 Mbps</td>
+                                    <td>5 Mbps</td>
+                                    <td>25+ Mbps</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="faq-section">
+                    <h2>Common Tulsa Internet Questions</h2>
+                    <div class="faq-container">
+                        <details class="faq-item">
+                            <summary>What's the fastest internet in Tulsa?</summary>
+                            <div class="faq-content">
+                                <p>The fastest internet in Tulsa is typically fiber from Cox, offering the highest speeds in select areas. However, availability varies by neighborhood.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>Why is my Tulsa internet slow at night?</summary>
+                            <div class="faq-content">
+                                <p>Internet speeds in Tulsa often slow down during peak hours (7-11 PM) when most residents are streaming and using the internet. This is called network congestion.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>How much does internet cost in Tulsa?</summary>
+                            <div class="faq-content">
+                                <p>Internet prices in Tulsa range from $30-100/month depending on speed and provider. Cox typically offers competitive rates, while premium providers may charge more for fiber connections.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Local SEO Content -->
+                <section class="local-seo-section">
+                    <h2>Internet Providers by ZIP Code in Tulsa</h2>
+                    <div class="zip-codes-grid">
+                        
+                        <div class="zip-code-item">
+                            <h4>74101</h4>
+                            <p>Cox, AT&T available</p>
+                        </div>
+                        
+                        <div class="zip-code-item">
+                            <h4>74102</h4>
+                            <p>Cox, AT&T available</p>
+                        </div>
+                        
+                        <div class="zip-code-item">
+                            <h4>74103</h4>
+                            <p>Cox, AT&T available</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <h2>Nearby Cities</h2>
+                    <div class="nearby-cities">
+                        <p>Also serving nearby areas:</p>
+                        <div class="nearby-links">
+                            <a href="/speed-test-tulsa-suburbs.html">Tulsa Suburbs</a>
+                            <a href="/speed-test-tulsa-metro.html">Tulsa Metro Area</a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Tulsa Internet Speed Test | Zero Data Collection | <a href="/privacy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="/js/speedtest.js"></script>
+    <script src="/js/ui.js"></script>
+    <script>
+        // City-specific enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add city context to results
+            const originalDisplayResults = window.speedTestUI.displayResults;
+            if (originalDisplayResults) {
+                const cityContext = {
+                    name: "Tulsa",
+                    avgSpeed: 131,
+                    isps: ["Cox","AT&T","Spectrum"]
+                };
+
+                // Enhance results with city data
+                const enhancedDisplayResults = function(results) {
+                    originalDisplayResults.call(this, results);
+
+                    // Add city comparison
+                    const cityComparison = document.createElement('div');
+                    cityComparison.className = 'city-comparison-enhanced';
+                    cityComparison.innerHTML = `
+                        <h4>📍 ${cityContext.name} Comparison</h4>
+                        <p>Your speed vs ${cityContext.name} average (${cityContext.avgSpeed} Mbps):</p>
+                        <div class="comparison-bar">
+                            <div class="your-speed" style="width: ${(results.download / cityContext.avgSpeed) * 100}%"></div>
+                        </div>
+                        <p><strong>${results.download > cityContext.avgSpeed ? '✅ Above' : '❌ Below'} ${cityContext.name} average</strong></p>
+                    `;
+
+                    const analysisSection = document.querySelector('.detailed-analysis');
+                    if (analysisSection) {
+                        analysisSection.appendChild(cityComparison);
+                    }
+                };
+
+                window.speedTestUI.displayResults = enhancedDisplayResults;
+            }
+        });
+    </script>
+</body>
+</html>
