@@ -673,6 +673,3 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
-
-
-//testing gitdocs functionality to autosave 
