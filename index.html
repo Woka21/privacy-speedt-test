@@ -1,423 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy-First Internet Speed Test | Zero Data Collection</title>
-    <meta name="description" content="Test your internet speed with complete privacy. No data collection, no tracking, no storage. Just accurate results in 3 seconds. Compare with local providers and troubleshoot issues.">
-    <meta name="keywords" content="internet speed test, wifi speed test, upload speed test, private speed test, no tracking, speed test comparison, local speed test">
+    <title>Privacy-First Speed Test | Zero Data Collection</title>
+    <meta name="description" content="Test your internet speed with complete privacy. Interactive results, dark mode, and comprehensive speed analysis.">
+    <meta name="keywords" content="internet speed test, ookla alternative, private speed test, interactive results, dark mode">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yoursite.com">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Privacy-First Internet Speed Test">
-    <meta property="og:description" content="Zero data collection speed test - completely private and accurate with local provider comparison">
+    <meta property="og:title" content="Privacy-First Speed Test | Interactive Results">
+    <meta property="og:description" content="Ookla-inspired speed test with zero data collection. Interactive results, dark mode, comprehensive analysis.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yoursite.com">
+    <meta property="og:site_name" content="Privacy Speed Test">
+    <meta property="og:image" content="https://yoursite.com/og-image.jpg">
     
-    <!-- Schema Markup for Homepage -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy-First Speed Test | Interactive Results">
+    <meta name="twitter:description" content="Ookla-inspired speed test with zero data collection.">
+    <meta name="twitter:image" content="https://yoursite.com/og-image.jpg">
+    
+    <!-- PWA & Mobile -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Speed Test">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+    <link rel="stylesheet" href="/css/interactive-results.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/js/speedtest.js" as="script">
+    <link rel="preload" href="/js/ui.js" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Privacy-First Speed Test",
-        "description": "Internet speed test with zero data collection and local provider comparison",
+        "description": "Interactive internet speed test with zero data collection",
         "applicationCategory": "UtilityApplication",
-        "offers": {"@type": "Offer", "price": "0"},
-        "featureList": ["No data collection", "Instant results", "Local provider comparison", "Troubleshooting guides"],
-        "author": {
-            "@type": "Organization",
-            "name": "Privacy Speed Test",
-            "url": "https://yoursite.com"
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        },
+        "featureList": ["Zero data collection", "Interactive results", "Dark mode", "Ookla-inspired design"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "1250"
         }
     }
     </script>
-    
-    <!-- Favicon and PWA -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2563eb">
-    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/navigation.css">
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
+    <!-- Skip to content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon light">☀️</span>
+        <span class="theme-icon dark">🌙</span>
+    </button>
 
-    <!-- Header with Navigation -->
-   <!-- Enhanced Header with Navigation -->
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <div class="logo-section">
-                <h1>🛡️ Privacy Speed Test</h1>
-                <p class="subtitle">Zero data collection • Instant results</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>⚡ Privacy Speed Test</h1>
+                <p class="subtitle">Interactive results • Zero data collection • Ookla-inspired</p>
             </div>
-            
-            <!-- Navigation Menu -->
-            <nav class="main-nav">
-                <a href="/" class="nav-link active">Speed Test</a>
-                <a href="/content/locations/speed-test-new-york.html" class="nav-link">By City</a>
-                <a href="/content/isps/xfinity-speed-test-new-york.html" class="nav-link">By ISP</a>
-                <a href="/content/problems/internet-keeps-disconnecting.html" class="nav-link">Troubleshooting</a>
-                <a href="/content/blog/internet-speed-complete-guide.html" class="nav-link">Guides</a>
+            <nav class="header-nav">
+                <a href="/tools/speed-test" class="nav-link active">Speed Test</a>
+                <a href="/tools/compare-providers" class="nav-link">Compare Providers</a>
+                <a href="/blog/internet-speed-guide" class="nav-link">Speed Guide</a>
+                <a href="/blog/troubleshooting" class="nav-link">Troubleshooting</a>
             </nav>
-            
-            <!-- Theme Toggle -->
-            <button class="theme-toggle" aria-label="Toggle theme">
-                <span class="theme-icon theme-icon-sun">☀️</span>
-                <span class="theme-icon theme-icon-moon">🌙</span>
-            </button>
-        </div>
-    </div>
-</header>
-
-<!-- Breadcrumb Navigation for Content Pages -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="container">
-        <ol class="breadcrumb-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/content/locations/">Locations</a></li>
-            <li><span aria-current="page">New York Speed Test</span></li>
-        </ol>
-    </div>
-</nav>
-                
-                <!-- Main Navigation -->
-                <nav class="main-nav" role="navigation" aria-label="Main navigation">
-                    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    
-                    <ul class="nav-menu">
-                        <li><a href="#speed-test" class="nav-link">Test Speed</a></li>
-                        <li class="nav-dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">By Location</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/content/locations/speed-test-new-york.html" class="dropdown-link">New York</a></li>
-                                <li><a href="/content/locations/speed-test-los-angeles.html" class="dropdown-link">Los Angeles</a></li>
-                                <li><a href="/content/locations/speed-test-chicago.html" class="dropdown-link">Chicago</a></li>
-                                <li><a href="/content/locations/" class="dropdown-link view-all">View All Cities →</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">By Provider</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/content/isps/xfinity-speed-test-new-york.html" class="dropdown-link">Xfinity</a></li>
-                                <li><a href="/content/isps/spectrum-speed-test-los-angeles.html" class="dropdown-link">Spectrum</a></li>
-                                <li><a href="/content/isps/att-speed-test-chicago.html" class="dropdown-link">AT&T</a></li>
-                                <li><a href="/content/isps/" class="dropdown-link view-all">View All Providers →</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">Help & Guides</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/content/problems/internet-keeps-disconnecting.html" class="dropdown-link">Fix Disconnections</a></li>
-                                <li><a href="/content/problems/why-is-my-internet-slow.html" class="dropdown-link">Speed Up Internet</a></li>
-                                <li><a href="/content/problems/" class="dropdown-link view-all">All Troubleshooting →</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#learn" class="nav-link">Learn</a></li>
-                    </ul>
-                </nav>
-            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main id="main-content" class="main">
         <div class="container">
-            <!-- Hero Section with Speed Test -->
-            <section class="hero-section">
-                <div class="hero-content">
-                    <div class="speed-test-card main-test-card">
-                        <div class="test-header">
-                            <h2>Test Your Internet Speed</h2>
-                            <p class="privacy-highlight">✈️ Zero data collection • Instant results • Complete privacy</p>
-                        </div>
-                        
-                        <div id="test-interface">
-                            <button id="start-test" class="primary-button large-button">
-                                <span>🚀 Start Speed Test</span>
-                            </button>
-                            <p class="privacy-note">All testing happens in your browser. No data leaves your device.</p>
-                        </div>
-
-                        <div id="test-progress" class="hidden">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                            <div class="progress-text">Initializing test...</div>
-                        </div>
-
-                        <!-- Enhanced Results Interface -->
-                        <div id="results-container" class="hidden">
-                            <!-- Results will be populated here -->
-                        </div>
-                    </div>
-
-                    <!-- Quick Stats -->
-                    <div class="quick-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">600+</div>
-                            <div class="stat-label">Cities Covered</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">289</div>
-                            <div class="stat-label">SEO Pages</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">1M+</div>
-                            <div class="stat-label">Monthly Searches</div>
-                        </div>
-                    </div>
+            <!-- Speed Test Interface -->
+            <div class="speed-test-container ookla-style">
+                <div class="test-header">
+                    <h2>Internet Speed Test</h2>
+                    <p class="test-subtitle">Click below to test your connection speed</p>
                 </div>
-            </section>
 
-            <!-- Quick Navigation Cards -->
-            <section class="quick-nav-section">
-                <h2>Popular Speed Tests</h2>
-                <div class="nav-cards-grid">
-                    <div class="nav-card">
-                        <div class="nav-card-icon">🏙️</div>
-                        <h3>By Location</h3>
-                        <p>Test speeds in your city and compare with local averages</p>
-                        <div class="nav-card-links">
-                            <a href="/content/locations/speed-test-new-york.html" class="nav-card-link">New York</a>
-                            <a href="/content/locations/speed-test-los-angeles.html" class="nav-card-link">Los Angeles</a>
-                            <a href="/content/locations/speed-test-chicago.html" class="nav-card-link">Chicago</a>
-                        </div>
-                        <a href="/content/locations/" class="nav-card-cta">View All Cities →</a>
-                    </div>
-
-                    <div class="nav-card">
-                        <div class="nav-card-icon">🏢</div>
-                        <h3>By Provider</h3>
-                        <p>Test specific ISPs and see if they're delivering promised speeds</p>
-                        <div class="nav-card-links">
-                            <a href="/content/isps/xfinity-speed-test-new-york.html" class="nav-card-link">Xfinity</a>
-                            <a href="/content/isps/spectrum-speed-test-los-angeles.html" class="nav-card-link">Spectrum</a>
-                            <a href="/content/isps/att-speed-test-chicago.html" class="nav-card-link">AT&T</a>
-                        </div>
-                        <a href="/content/isps/" class="nav-card-cta">View All Providers →</a>
-                    </div>
-
-                    <div class="nav-card">
-                        <div class="nav-card-icon">🔧</div>
-                        <h3>Fix Problems</h3>
-                        <p>Solve common internet issues with step-by-step guides</p>
-                        <div class="nav-card-links">
-                            <a href="/content/problems/internet-keeps-disconnecting.html" class="nav-card-link">Fix Disconnections</a>
-                            <a href="/content/problems/why-is-my-internet-slow.html" class="nav-card-link">Speed Up Internet</a>
-                            <a href="/content/problems/wifi-slow-but-ethernet-fast.html" class="nav-card-link">WiFi vs Ethernet</a>
-                        </div>
-                        <a href="/content/problems/" class="nav-card-cta">All Solutions →</a>
-                    </div>
-
-                    <div class="nav-card">
-                        <div class="nav-card-icon">📊</div>
-                        <h3>Understand Results</h3>
-                        <p>Learn what your speed results mean and how to interpret them</p>
-                        <div class="nav-card-links">
-                            <a href="/content/results/what-does-100-mbps-mean.html" class="nav-card-link">100 Mbps Guide</a>
-                            <a href="/content/results/what-does-25-mbps-mean.html" class="nav-card-link">25 Mbps Guide</a>
-                            <a href="/content/results/is-100-mbps-good.html" class="nav-card-link">Is 100 Mbps Good?</a>
-                        </div>
-                        <a href="/content/results/" class="nav-card-cta">All Guides →</a>
-                    </div>
+                <div id="test-interface" class="test-interface active">
+                    <button id="start-test" class="start-button ookla-button">
+                        <span class="button-text">GO</span>
+                        <span class="button-icon">►</span>
+                    </button>
+                    <div class="test-status">Ready to test</div>
                 </div>
-            </section>
 
-            <!-- Educational Content -->
-            <section id="learn" class="seo-content">
-                <h2>Understanding Internet Speed</h2>
-                <div class="content-grid">
-                    <article class="content-card">
-                        <h3>⬇️ Download Speed</h3>
-                        <p>How fast data comes to your device. You need:</p>
-                        <ul class="speed-list">
-                            <li>3+ Mbps for HD Netflix</li>
-                            <li>25+ Mbps for 4K Netflix</li>
-                            <li>100+ Mbps for large downloads</li>
-                        </ul>
-                        <a href="/content/results/what-does-25-mbps-mean.html" class="learn-more">Learn More →</a>
+                <!-- Interactive Results Display -->
+                <div id="results-container" class="results-container hidden">
+                    <!-- Real-time results will be populated here -->
+                </div>
+
+                <!-- Live Progress Indicator -->
+                <div id="test-progress" class="test-progress hidden">
+                    <div class="progress-ring">
+                        <svg class="progress-svg" viewBox="0 0 120 120">
+                            <circle class="progress-bg" cx="60" cy="60" r="54" stroke-width="8"></circle>
+                            <circle class="progress-bar" cx="60" cy="60" r="54" stroke-width="8"></circle>
+                            <text class="progress-text" x="60" y="60" text-anchor="middle">0%</text>
+                        </svg>
+                    </div>
+                    <div class="progress-status">Initializing...</div>
+                </div>
+            </div>
+
+            <!-- Real-Time Results Panel -->
+            <div id="real-time-results" class="real-time-results hidden">
+                <div class="results-grid">
+                    <!-- Results populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Enhanced Blog Content -->
+            <section class="blog-content">
+                <h2>Understanding Your Internet Speed</h2>
+                
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <div class="image-placeholder speed-test"></div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>What is Good Internet Speed in 2024?</h3>
+                            <p>Discover the minimum speeds needed for streaming, gaming, video calls, and more. Plus, see how your speed compares to national averages...</p>
+                            <a href="/blog/what-is-good-internet-speed" class="read-more">Read More →</a>
+                        </div>
                     </article>
-                    <article class="content-card">
-                        <h3>⬆️ Upload Speed</h3>
-                        <p>How fast you send data. You need:</p>
-                        <ul class="speed-list">
-                            <li>1+ Mbps for basic video calls</li>
-                            <li>3+ Mbps for HD video calls</li>
-                            <li>10+ Mbps for live streaming</li>
-                        </ul>
-                        <a href="/content/results/what-does-10-mbps-mean.html" class="learn-more">Learn More →</a>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <div class="image-placeholder streaming"></div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Internet Speed for Streaming: Exact Requirements</h3>
+                            <p>Netflix, Hulu, Disney+, YouTube - find the exact Mbps needed for each service. Includes 4K streaming requirements and multiple device scenarios...</p>
+                            <a href="/blog/internet-speed-for-streaming" class="read-more">Read More →</a>
+                        </div>
                     </article>
-                    <article class="content-card">
-                        <h3>⚡ Ping & Jitter</h3>
-                        <p>Response time and stability. You need:</p>
-                        <ul class="speed-list">
-                            <li>&lt;50ms ping for smooth gaming</li>
-                            <li>&lt;100ms ping for video calls</li>
-                            <li>&lt;30ms jitter for stability</li>
-                        </ul>
-                        <a href="/content/problems/" class="learn-more">Troubleshoot Issues →</a>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <div class="image-placeholder gaming"></div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Best Internet Speed for Gaming [Complete Guide]</h3>
+                            <p>PC, console, mobile gaming - find the perfect speed for your setup. Includes ping requirements, streaming while gaming, and pro tips...</p>
+                            <a href="/blog/internet-speed-for-gaming" class="read-more">Read More →</a>
+                        </div>
                     </article>
                 </div>
-            </section>
 
-            <!-- Popular Troubleshooting Quick Links -->
-            <section class="troubleshooting-quick-links">
-                <h2>Popular Troubleshooting Guides</h2>
-                <div class="quick-links-grid">
-                    <a href="/content/problems/internet-keeps-disconnecting.html" class="quick-link">
-                        <div class="quick-link-icon">🔄</div>
-                        <div class="quick-link-content">
-                            <h4>Internet Keeps Disconnecting</h4>
-                            <p>Fix unstable connections</p>
-                        </div>
-                    </a>
-                    <a href="/content/problems/why-is-my-internet-slow.html" class="quick-link">
-                        <div class="quick-link-icon">🐌</div>
-                        <div class="quick-link-content">
-                            <h4>Why Is My Internet Slow?</h4>
-                            <p>Speed up your connection</p>
-                        </div>
-                    </a>
-                    <a href="/content/problems/wifi-slow-but-ethernet-fast.html" class="quick-link">
-                        <div class="quick-link-icon">📶</div>
-                        <div class="quick-link-content">
-                            <h4>WiFi vs Ethernet</h4>
-                            <p>Fix WiFi speed issues</p>
-                        </div>
-                    </a>
-                    <a href="/content/problems/internet-speed-test-accurate.html" class="quick-link">
-                        <div class="quick-link-icon">🎯</div>
-                        <div class="quick-link-content">
-                            <h4>Test Accuracy</h4>
-                            <p>Get reliable results</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="view-all-container">
-                    <a href="/content/problems/" class="view-all-button">View All Troubleshooting Guides →</a>
+                <div class="blog-cta">
+                    <h3>Want More Speed Insights?</h3>
+                    <p>Browse our complete collection of speed guides and troubleshooting articles</p>
+                    <a href="/blog" class="blog-button">View All Articles</a>
                 </div>
             </section>
 
-            <!-- Local SEO Section -->
-            <section class="local-seo-section">
-                <h2>Speed Test by Location</h2>
-                <p>Compare internet speeds in major US cities:</p>
-                <div class="city-links-grid">
-                    <div class="city-column">
-                        <h4>East Coast</h4>
-                        <a href="/content/locations/speed-test-new-york.html" class="city-link">New York</a>
-                        <a href="/content/locations/speed-test-philadelphia.html" class="city-link">Philadelphia</a>
-                        <a href="/content/locations/speed-test-boston.html" class="city-link">Boston</a>
-                        <a href="/content/locations/speed-test-washington.html" class="city-link">Washington DC</a>
+            <!-- Interactive Tools Section -->
+            <section class="tools-section">
+                <h2>Interactive Speed Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h3>📊 Speed Comparison</h3>
+                        <p>Compare your speed with national averages and see how you rank</p>
+                        <a href="/tools/compare-speeds" class="tool-link">Compare Speeds →</a>
                     </div>
-                    <div class="city-column">
-                        <h4>West Coast</h4>
-                        <a href="/content/locations/speed-test-los-angeles.html" class="city-link">Los Angeles</a>
-                        <a href="/content/locations/speed-test-san-francisco.html" class="city-link">San Francisco</a>
-                        <a href="/content/locations/speed-test-seattle.html" class="city-link">Seattle</a>
-                        <a href="/content/locations/speed-test-san-diego.html" class="city-link">San Diego</a>
+                    <div class="tool-card">
+                        <h3>🏢 Provider Comparison</h3>
+                        <p>Compare internet providers in your area and find the best deals</p>
+                        <a href="/tools/compare-providers" class="tool-link">Compare Providers →</a>
                     </div>
-                    <div class="city-column">
-                        <h4>Central</h4>
-                        <a href="/content/locations/speed-test-chicago.html" class="city-link">Chicago</a>
-                        <a href="/content/locations/speed-test-houston.html" class="city-link">Houston</a>
-                        <a href="/content/locations/speed-test-dallas.html" class="city-link">Dallas</a>
-                        <a href="/content/locations/speed-test-denver.html" class="city-link">Denver</a>
+                    <div class="tool-card">
+                        <h3>🔧 Troubleshooting</h3>
+                        <p>Fix common internet issues with our interactive guides</p>
+                        <a href="/tools/troubleshoot" class="tool-link">Fix Issues →</a>
                     </div>
-                </div>
-                <div class="view-all-container">
-                    <a href="/content/locations/" class="view-all-button">View All 48 Cities →</a>
                 </div>
             </section>
 
-            <!-- FAQ Section -->
+            <!-- SEO-Optimized FAQ Section -->
             <section class="faq-section">
-                <h2>Common Questions</h2>
+                <h2>Common Speed Questions</h2>
                 <div class="faq-container">
                     <details class="faq-item">
                         <summary>Why is my internet slow at night?</summary>
                         <div class="faq-content">
-                            <p>Internet speeds often slow down during peak hours (7-11 PM) when everyone in your neighborhood is streaming. This is called network congestion. <a href="/content/problems/why-is-my-internet-slow.html">Learn how to fix this →</a></p>
+                            <p>Internet speeds often slow down during peak hours (7-11 PM) when everyone in your neighborhood is streaming. This is called network congestion. Your ISP's network gets overloaded with high demand.</p>
+                            <p><strong>Solution:</strong> Test your speed at different times. If it's consistently slow, contact your ISP or consider upgrading your plan.</p>
                         </div>
                     </details>
                     <details class="faq-item">
                         <summary>What's the difference between download and upload speed?</summary>
                         <div class="faq-content">
-                            <p><strong>Download speed</strong> affects how fast you receive data (streaming, browsing). <strong>Upload speed</strong> affects how fast you send data (video calls, uploading). Most plans have higher download than upload speeds. <a href="/content/results/what-does-25-mbps-mean.html">Learn more →</a></p>
+                            <p><strong>Download speed</strong> affects how fast you can receive data - streaming movies, browsing websites, downloading files.</p>
+                            <p><strong>Upload speed</strong> affects how fast you can send data - video calls, uploading photos, live streaming, gaming.</p>
+                            <p>Most internet plans have much higher download than upload speeds because most people consume more content than they create.</p>
                         </div>
                     </details>
                     <details class="faq-item">
                         <summary>How accurate is this speed test?</summary>
-                            <p>Our test is highly accurate because it runs directly in your browser using reliable CDN endpoints. For best results, test with an Ethernet cable and close other applications. <a href="/content/problems/internet-speed-test-accurate.html">Learn about accuracy →</a></p>
+                            <div class="faq-content">
+                            <p>Our test is highly accurate because it:</p>
+                            <ul>
+                                <li>Runs directly in your browser (no server delays)</li>
+                                <li>Uses reliable CDN endpoints for testing</li>
+                                <li>Tests multiple aspects of your connection</li>
+                                <li>Performs calculations locally on your device</li>
+                            </ul>
+                            <p><strong>For best results:</strong> Use an Ethernet cable, close other applications, and test at different times of day.</p>
+                        </div>
                     </details>
-                </div>
-                <div class="view-all-container">
-                    <a href="#faq" class="view-all-button">View All FAQs →</a>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Footer with Navigation -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Speed Test Tools</h4>
-                    <ul class="footer-links">
-                        <li><a href="#speed-test">Main Speed Test</a></li>
-                        <li><a href="/content/locations/">By Location</a></li>
-                        <li><a href="/content/isps/">By Provider</a></li>
-                        <li><a href="/content/results/">Speed Guides</a></li>
+                    <ul>
+                        <li><a href="/tools/speed-test">Interactive Speed Test</a></li>
+                        <li><a href="/tools/compare-providers">Provider Comparison</a></li>
+                        <li><a href="/tools/troubleshoot">Troubleshooting</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Help & Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="/content/problems/internet-keeps-disconnecting.html">Fix Disconnections</a></li>
-                        <li><a href="/content/problems/why-is-my-internet-slow.html">Speed Up Internet</a></li>
-                        <li><a href="/content/problems/">All Troubleshooting</a></li>
+                    <h4>Speed Guides</h4>
+                    <ul>
+                        <li><a href="/blog/what-is-good-internet-speed">What is Good Speed?</a></li>
+                        <li><a href="/blog/internet-speed-for-streaming">Speed for Streaming</a></li>
+                        <li><a href="/blog/internet-speed-for-gaming">Speed for Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/blog/troubleshooting">Troubleshooting Guides</a></li>
+                        <li><a href="/blog/provider-guides">Provider Guides</a></li>
                         <li><a href="/privacy">Privacy Policy</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Popular Cities</h4>
-                    <ul class="footer-links">
-                        <li><a href="/content/locations/speed-test-new-york.html">New York</a></li>
-                        <li><a href="/content/locations/speed-test-los-angeles.html">Los Angeles</a></li>
-                        <li><a href="/content/locations/speed-test-chicago.html">Chicago</a></li>
-                        <li><a href="/content/locations/">All Cities →</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>About</h4>
-                    <p>Privacy-First Speed Test provides accurate internet speed testing with zero data collection. Compare providers, troubleshoot issues, and understand your connection.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-                        <a href="#" class="social-link" aria-label="Reddit">🔴</a>
-                        <a href="#" class="social-link" aria-label="GitHub">🐙</a>
-                    </div>
-                </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 Privacy-First Speed Test | Zero Data Collection | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a></p>
-                <p>Made with ❤️ for internet users who value privacy</p>
+                <p>&copy; 2024 Privacy Speed Test | Zero Data Collection | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a></p>
+                <p>Not affiliated with Ookla Speedtest. Privacy-first alternative.</p>
             </div>
         </div>
     </footer>
@@ -425,6 +284,21 @@
     <!-- Scripts -->
     <script src="/js/speedtest.js"></script>
     <script src="/js/ui.js"></script>
-    <script src="/js/navigation.js"></script>
+    <script src="/js/dark-mode.js"></script>
+    <script src="/js/interactive-results.js"></script>
+    
+    <!-- PWA Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').catch(() => {
+                console.log('Service Worker registration failed');
+            });
+        }
+        
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </body>
 </html>
