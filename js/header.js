@@ -43,7 +43,7 @@ class HeaderNavigation {
             const problemsData = await problemsResponse.json();
             this.searchData.troubleshoot = problemsData.map(item => ({
                 text: item.title.split('?')[0] + '?',
-                url: `/content/problems/${item.keyword}.html`,
+                url: this.generateProblemUrl(item.keyword),
                 keywords: [item.keyword, item.title.toLowerCase()]
             }));
 
@@ -52,7 +52,7 @@ class HeaderNavigation {
             const citiesData = await citiesResponse.json();
             this.searchData.locations = citiesData.map(city => ({
                 text: `${city.name}, ${city.state}`,
-                url: `/content/locations/speed-test-${this.slugify(city.name)}.html`,
+                url: this.generateLocationUrl(city.name),
                 keywords: [city.name.toLowerCase(), city.state.toLowerCase(), `${city.name} ${city.state}`.toLowerCase()]
             }));
 
@@ -61,20 +61,16 @@ class HeaderNavigation {
             const ispsData = await ispsResponse.json();
             this.searchData.isps = ispsData.map(isp => ({
                 text: isp.name,
-                url: `/content/ISPs/${this.slugify(isp.name)}-speed-test-new-york.html`,
+                url: this.generateIspUrl(isp.name),
                 keywords: [isp.name.toLowerCase(), isp.type.toLowerCase()]
             }));
-
-            // For ISPs, we need to create URLs that match the actual file structure
-            // The ISP files are named like "at&t-speed-test-new-york.html" where each ISP has pages for different cities
-            // For search, we'll link to the New York page as a representative example
 
             // Load results data
             const resultsResponse = await fetch('/data/results.json');
             const resultsData = await resultsResponse.json();
             this.searchData.results = resultsData.map(result => ({
                 text: `${result.speed} Mbps`,
-                url: `/content/results/what-does-${result.speed}-mbps-mean.html`,
+                url: this.generateResultUrl(result.speed),
                 keywords: [`${result.speed} mbps`, result.rating.toLowerCase(), result.description.toLowerCase()]
             }));
 
@@ -82,6 +78,34 @@ class HeaderNavigation {
             console.error('Failed to load navigation data:', error);
             this.loadFallbackData();
         }
+    }
+
+    /**
+     * Generate URL for problem pages (matches problem-generator.js)
+     */
+    generateProblemUrl(keyword) {
+        return `/content/problems/${keyword.replace(/\s+/g, '-')}.html`;
+    }
+
+    /**
+     * Generate URL for location pages (matches location-generator.js)
+     */
+    generateLocationUrl(cityName) {
+        return `/content/locations/speed-test-${this.slugify(cityName)}.html`;
+    }
+
+    /**
+     * Generate URL for ISP pages (matches isp-generator.js)
+     */
+    generateIspUrl(ispName) {
+        return `/content/isps/${this.slugify(ispName)}-speed-test-new-york.html`;
+    }
+
+    /**
+     * Generate URL for result pages (matches results_generator.js)
+     */
+    generateResultUrl(speed) {
+        return `/content/results/what-does-${speed}-mbps-mean.html`;
     }
 
     /**
@@ -109,7 +133,9 @@ class HeaderNavigation {
             { text: 'Spectrum', url: '/content/isps/spectrum-speed-test-new-york.html', keywords: ['spectrum', 'cable'] },
             { text: 'AT&T', url: '/content/isps/at&t-speed-test-new-york.html', keywords: ['at&t', 'mixed'] },
             { text: 'Verizon Fios', url: '/content/isps/verizon-fios-speed-test-new-york.html', keywords: ['verizon', 'fiber'] },
-            { text: 'CenturyLink', url: '/content/isps/centurylink-speed-test-new-york.html', keywords: ['centurylink', 'mixed'] }
+            { text: 'CenturyLink', url: '/content/isps/centurylink-speed-test-new-york.html', keywords: ['centurylink', 'mixed'] },
+            { text: 'Cox', url: '/content/isps/cox-speed-test-new-york.html', keywords: ['cox', 'cable'] },
+            { text: 'Google Fiber', url: '/content/isps/google-fiber-speed-test-new-york.html', keywords: ['google', 'fiber'] }
         ];
 
         this.searchData.results = [
