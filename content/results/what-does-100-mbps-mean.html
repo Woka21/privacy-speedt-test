@@ -17,8 +17,8 @@
             "@type": "Organization",
             "name": "Privacy Speed Test"
         },
-        "datePublished": "2025-12-06T09:23:35.957Z",
-        "dateModified": "2025-12-06T09:23:35.957Z"
+        "datePublished": "2025-12-06T09:46:43.061Z",
+        "dateModified": "2025-12-06T09:46:43.061Z"
     }
     </script>
     
@@ -85,11 +85,15 @@
     <div id="header-container"></div>
 
     <script>
-    // Load header component
+    // Load header component and initialize navigation
     fetch('/header.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('header-container').innerHTML = html;
+            // Initialize header navigation after HTML is loaded
+            if (window.HeaderNavigation) {
+                window.headerNavigation = new window.HeaderNavigation();
+            }
         })
         .catch(error => {
             console.error('Failed to load header:', error);
