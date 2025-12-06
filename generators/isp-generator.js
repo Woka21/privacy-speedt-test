@@ -1,4 +1,4 @@
-/**
+ader/**
  * ISP-Specific Content Generator
  * Creates ISP×City combination pages for provider-specific SEO
  */
@@ -143,6 +143,7 @@ const ispTemplate = (isp, city, state) => {
     
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <script src="/js/header.js"></script>
 </head>
 <body>
     <!-- Header -->

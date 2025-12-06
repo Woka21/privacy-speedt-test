@@ -429,6 +429,7 @@ const problemPageTemplate = (problem) => `
     
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <script src="/js/header.js"></script>
     <style>
         /* Problem page specific styles */
         .problem-summary { display: flex; justify-content: space-between; align-items: center; margin: 2rem 0; }
