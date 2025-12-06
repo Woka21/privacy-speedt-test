@@ -145,7 +145,23 @@ const ispTemplate = (isp, city, state) => {
     <link rel="stylesheet" href="/css/responsive.css">
 </head>
 <body>
-    <header class="header">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <script>
+    // Load header component
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Failed to load header:', error);
+        });
+    </script>
+
+    <!-- Page Header -->
+    <header class="page-header">
         <div class="container">
             <h1>🛡️ ${isp} Speed Test ${city}</h1>
             <p class="subtitle">Is ${isp} delivering promised speeds in ${city}? • Test now</p>

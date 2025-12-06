@@ -469,7 +469,28 @@ const problemPageTemplate = (problem) => `
     </style>
 </head>
 <body>
-    ${problemTemplates.header(problem)}
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <script>
+    // Load header component
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Failed to load header:', error);
+        });
+    </script>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>🛡️ ${problem.title}</h1>
+            <p class="subtitle">${problem.description}</p>
+        </div>
+    </header>
     ${problemTemplates.heroSection(problem)}
     ${problemTemplates.solutionSections(problem)}
     ${problemTemplates.ispSpecificSection(problem)}

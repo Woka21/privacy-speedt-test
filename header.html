@@ -1,0 +1,322 @@
+<!-- Reusable Header Component -->
+<header class="main-header">
+    <div class="header-container">
+        <!-- LEFT: Branding/Logo -->
+        <div class="header-brand">
+            <a href="/" class="brand-link">
+                <span class="brand-icon">🛡️</span>
+                <span class="brand-text">PrivacySpeed</span>
+            </a>
+        </div>
+
+        <!-- RIGHT: Navigation (starts 25% from left) -->
+        <nav class="header-nav">
+            <!-- Troubleshoot Dropdown -->
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-trigger" aria-expanded="false">
+                    <span>🔧 Troubleshoot</span>
+                    <svg class="dropdown-icon" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <div class="dropdown-header">Common Issues</div>
+                    <div class="dropdown-list" id="troubleshoot-dropdown">
+                        <!-- Generated from JS -->
+                    </div>
+                    <a href="/content/problems/" class="dropdown-footer">View All Problems →</a>
+                </div>
+            </div>
+
+            <!-- By Location Dropdown -->
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-trigger" aria-expanded="false">
+                    <span>📍 By Location</span>
+                    <svg class="dropdown-icon" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <div class="dropdown-header">Popular Cities</div>
+                    <div class="dropdown-list" id="location-dropdown">
+                        <!-- Generated from JS -->
+                    </div>
+                    <a href="/content/locations/" class="dropdown-footer">Browse All Cities →</a>
+                </div>
+            </div>
+
+            <!-- By ISP Dropdown -->
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-trigger" aria-expanded="false">
+                    <span>🏢 By ISP</span>
+                    <svg class="dropdown-icon" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <div class="dropdown-header">Major Providers</div>
+                    <div class="dropdown-list" id="isp-dropdown">
+                        <!-- Generated from JS -->
+                    </div>
+                    <a href="/content/isps/" class="dropdown-footer">View All ISPs →</a>
+                </div>
+            </div>
+
+            <!-- Main Test Button -->
+            <a href="/" class="nav-test-button">
+                <span>🚀 Test Speed</span>
+            </a>
+        </nav>
+    </div>
+</header>
+
+<!-- Header Styles -->
+<style>
+/* ===== HEADER STYLES - Google-Style Dropdowns ===== */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* LEFT: Branding (25% width) */
+.header-brand {
+    flex: 0 0 25%;
+    display: flex;
+    align-items: center;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: opacity 0.2s;
+}
+
+.brand-link:hover {
+    opacity: 0.8;
+}
+
+.brand-icon {
+    font-size: 1.5rem;
+}
+
+.brand-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* RIGHT: Navigation (75% width, right-aligned) */
+.header-nav {
+    flex: 0 0 75%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* Dropdown Base Styles */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    color: #4b5563;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.nav-dropdown-trigger:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    transition: transform 0.2s;
+}
+
+.nav-dropdown-trigger[aria-expanded="true"] .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu - Google Style */
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    max-width: 320px;
+    max-height: 400px;
+    overflow: hidden;
+    display: none;
+    z-index: 1001;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-trigger[aria-expanded="true"] + .nav-dropdown-menu {
+    display: block;
+}
+
+.dropdown-header {
+    padding: 1rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.dropdown-list {
+    max-height: 280px;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #1f2937;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+    background: #f3f4f6;
+    color: #667eea;
+}
+
+.dropdown-item-icon {
+    margin-right: 0.75rem;
+}
+
+.dropdown-footer {
+    display: block;
+    padding: 1rem 1.25rem;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    border-top: 1px solid #f3f4f6;
+    transition: all 0.2s;
+}
+
+.dropdown-footer:hover {
+    background: #f9fafb;
+    color: #764ba2;
+}
+
+/* Test Button */
+.nav-test-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    margin-left: 1rem;
+}
+
+.nav-test-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .header-brand {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-nav {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-dropdown-menu {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        right: auto;
+        max-width: 90vw;
+        max-height: 70vh;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-test-button {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Active page highlighting */
+.nav-dropdown-trigger[aria-expanded="true"],
+.nav-test-button[aria-current="page"] {
+    background: #f3f4f6;
+    color: #667eea;
+}
+
+/* Smooth animations */
+.nav-dropdown-menu,
+.dropdown-icon {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+</style>
+
+<!-- Header JavaScript -->
+<script type="module" src="/js/header.js"></script>
