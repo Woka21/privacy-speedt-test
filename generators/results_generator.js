@@ -26,9 +26,9 @@ const resultsTemplate = (speed) => {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Is ${speed} Mbps Good? What ${speed} Mbps Internet Speed Means</title>
-    <meta name="description" content="Find out if ${speed} Mbps internet speed is good. See what you can do with ${speed} Mbps and compare with national averages.">
-    <meta name="keywords" content="is ${speed} mbps good, ${speed} mbps internet speed, what can i do with ${speed} mbps, ${speed} mbps download speed, is ${speed} mbps fast">
+    <title>Speed Test Results Explained: Download, Upload & Ping Guide</title>
+    <meta name="description" content="Decode your speed test: Learn what download/upload speeds, ping, and jitter mean for everyday use. Benchmarks for streaming, gaming, and more—simple and clear.">
+    <meta name="keywords" content="speed test results explained, what does ${speed} mbps mean, download vs upload speed, what do ping times mean, interpret broadband speed test, ${speed} mbps speed explained">
     
     <!-- Schema Markup -->
     <script type="application/ld+json">

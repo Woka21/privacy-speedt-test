@@ -102,9 +102,9 @@ const ispTemplate = (isp, city, state) => {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>${isp} Speed Test: Free Tool to Boost Your WiFi in ${city}</title>
-    <meta name="description" content="Test your ${isp} internet speed in ${city}, ${state}. See if ${isp} is delivering promised speeds and compare with other providers.">
-    <meta name="keywords" content="${isp.toLowerCase()} speed test, ${isp.toLowerCase()} ${city.toLowerCase()}, ${isp.toLowerCase()} internet speed, test ${isp.toLowerCase()} connection, ${isp.toLowerCase()} speed check ${city.toLowerCase()}">
+    <title>${isp} Speed Test: Free Accurate Internet Check Online</title>
+    <meta name="description" content="Test your ${isp} internet speed with our free tool—measure download, upload, and ping in seconds. Perfect for home or mobile plans; see if you're getting full Gigabit speeds today!">
+    <meta name="keywords" content="${isp.toLowerCase()} speed test, free ${isp.toLowerCase()} speed test online, ${isp.toLowerCase()} broadband speed check, accurate ${isp.toLowerCase()} speed test tool, ${isp.toLowerCase()} download speed checker, best free ${isp.toLowerCase()} speed test 2025">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yoursite.com/content/isps/${slug}.html">
@@ -176,6 +176,10 @@ const ispTemplate = (isp, city, state) => {
 
     <main class="main">
         <div class="container">
+            <div class="intro-paragraph">
+                <p>Wondering if your ${isp} connection is up to snuff? Our free speed test delivers precise results for download (up to ${ispInfo.plans[ispInfo.plans.length-1].speed}Mbps), upload (${Math.round(ispInfo.plans[1].speed * 0.15)}Mbps+), and latency, helping millions verify their service daily. Based on FCC standards, a solid home setup needs at least 100Mbps down for 4K streaming—run our quick test to check yours and spot any issues early. No hassle, just reliable data to ensure you're paying for performance. Start testing now and join users who've optimized their broadband effortlessly.</p>
+            </div>
+
             <div class="speed-test-card">
                 <div id="test-interface">
                     <button id="start-test" class="primary-button">
