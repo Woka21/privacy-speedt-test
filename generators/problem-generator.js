@@ -1,4 +1,4 @@
- n/**
+ /**
  * Problem-Solving Content Generator
  * Creates 50+ troubleshooting pages targeting high-intent searches
  */
