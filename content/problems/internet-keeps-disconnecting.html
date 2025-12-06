@@ -139,11 +139,15 @@
     <div id="header-container"></div>
 
     <script>
-    // Load header component
+    // Load header component and initialize navigation
     fetch('/header.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('header-container').innerHTML = html;
+            // Initialize header navigation after HTML is loaded
+            if (window.HeaderNavigation) {
+                window.headerNavigation = new window.HeaderNavigation();
+            }
         })
         .catch(error => {
             console.error('Failed to load header:', error);
