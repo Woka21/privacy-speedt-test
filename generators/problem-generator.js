@@ -383,7 +383,7 @@ const problemPageTemplate = (problem) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>${problem.title}</title>
+    <title>${problem.title}: Step-by-Step Troubleshooting Guide</title>
     <meta name="description" content="${problem.description}">
     <meta name="keywords" content="${problem.keyword}, ${problem.related.join(', ')}">
     
@@ -494,7 +494,7 @@ const problemPageTemplate = (problem) => `
     <main class="main">
         <div class="container">
             <div class="intro-paragraph">
-                <p>Experiencing ${problem.keyword}? You're not alone - ${problem.volume.toLocaleString()} people search for this issue every month. This comprehensive guide provides proven solutions to fix ${problem.keyword} problems quickly and effectively. Follow our step-by-step troubleshooting process to identify and resolve the issue.</p>
+                <p>Why is my internet slow? If your internet speed is slow, latency could be the issue—run a test today! Experiencing ${problem.keyword}? You're not alone - ${problem.volume.toLocaleString()} people search for this issue every month. This comprehensive guide provides proven solutions to fix ${problem.keyword} problems quickly and effectively. Follow our step-by-step troubleshooting process to identify and resolve the issue.</p>
             </div>
         </div>
     </main>
