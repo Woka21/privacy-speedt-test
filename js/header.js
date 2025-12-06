@@ -135,6 +135,15 @@ class HeaderNavigation {
                 </a>
             `;
         }).join('');
+
+        // Add "View All" link at the end
+        if (type === 'troubleshoot') {
+            dropdown.innerHTML += `<a href="/content/problems/" class="dropdown-footer">View All Problems →</a>`;
+        } else if (type === 'location') {
+            dropdown.innerHTML += `<a href="/content/locations/" class="dropdown-footer">Browse All Cities →</a>`;
+        } else if (type === 'isp') {
+            dropdown.innerHTML += `<a href="/content/isps/" class="dropdown-footer">View All ISPs →</a>`;
+        }
     }
 
     /**

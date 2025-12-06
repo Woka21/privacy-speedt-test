@@ -1,184 +1,176 @@
-<!-- Reusable Header Component -->
-<header class="main-header">
-    <div class="header-container">
-        <!-- LEFT: Branding/Logo -->
-        <div class="header-brand">
-            <a href="/" class="brand-link">
-                <span class="brand-icon">🛡️</span>
-                <span class="brand-text">PrivacySpeed</span>
-            </a>
+<!-- Reusable Header Component - Coherent with Website Design -->
+<header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <a href="/" class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">Privacy Speed Test</span>
+                </a>
+            </div>
+
+            <!-- Navigation Section -->
+            <nav class="main-navigation">
+                <!-- Troubleshoot Dropdown -->
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" data-dropdown="troubleshoot">
+                        🔧 Troubleshoot
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="dropdown-menu" id="troubleshoot-dropdown">
+                        <div class="dropdown-content">
+                            <!-- Generated from JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- By Location Dropdown -->
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" data-dropdown="locations">
+                        📍 By Location
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="dropdown-menu" id="locations-dropdown">
+                        <div class="dropdown-content">
+                            <!-- Generated from JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- By ISP Dropdown -->
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" data-dropdown="isps">
+                        🏢 By ISP
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="dropdown-menu" id="isps-dropdown">
+                        <div class="dropdown-content">
+                            <!-- Generated from JS -->
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <a href="/" class="cta-button primary-button">
+                    <span>🚀 Test Speed</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
-
-        <!-- RIGHT: Navigation (starts 25% from left) -->
-        <nav class="header-nav">
-            <!-- Troubleshoot Dropdown -->
-            <div class="nav-dropdown">
-                <button class="nav-dropdown-trigger" aria-expanded="false">
-                    <span>🔧 Troubleshoot</span>
-                    <svg class="dropdown-icon" viewBox="0 0 24 24">
-                        <path d="M7 10l5 5 5-5z"/>
-                    </svg>
-                </button>
-                <div class="nav-dropdown-menu">
-                    <div class="dropdown-header">Common Issues</div>
-                    <div class="dropdown-list" id="troubleshoot-dropdown">
-                        <!-- Generated from JS -->
-                    </div>
-                    <a href="/content/problems/" class="dropdown-footer">View All Problems →</a>
-                </div>
-            </div>
-
-            <!-- By Location Dropdown -->
-            <div class="nav-dropdown">
-                <button class="nav-dropdown-trigger" aria-expanded="false">
-                    <span>📍 By Location</span>
-                    <svg class="dropdown-icon" viewBox="0 0 24 24">
-                        <path d="M7 10l5 5 5-5z"/>
-                    </svg>
-                </button>
-                <div class="nav-dropdown-menu">
-                    <div class="dropdown-header">Popular Cities</div>
-                    <div class="dropdown-list" id="location-dropdown">
-                        <!-- Generated from JS -->
-                    </div>
-                    <a href="/content/locations/" class="dropdown-footer">Browse All Cities →</a>
-                </div>
-            </div>
-
-            <!-- By ISP Dropdown -->
-            <div class="nav-dropdown">
-                <button class="nav-dropdown-trigger" aria-expanded="false">
-                    <span>🏢 By ISP</span>
-                    <svg class="dropdown-icon" viewBox="0 0 24 24">
-                        <path d="M7 10l5 5 5-5z"/>
-                    </svg>
-                </button>
-                <div class="nav-dropdown-menu">
-                    <div class="dropdown-header">Major Providers</div>
-                    <div class="dropdown-list" id="isp-dropdown">
-                        <!-- Generated from JS -->
-                    </div>
-                    <a href="/content/isps/" class="dropdown-footer">View All ISPs →</a>
-                </div>
-            </div>
-
-            <!-- Main Test Button -->
-            <a href="/" class="nav-test-button">
-                <span>🚀 Test Speed</span>
-            </a>
-        </nav>
     </div>
 </header>
 
-<!-- Header Styles -->
+<!-- Header Styles - Coherent with Website Design -->
 <style>
-/* ===== HEADER STYLES - Google-Style Dropdowns ===== */
-.main-header {
+/* ===== HEADER STYLES - Matching Website Design ===== */
+.site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background: var(--card-background);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    gap: 2rem;
 }
 
-/* LEFT: Branding (25% width) */
-.header-brand {
-    flex: 0 0 25%;
-    display: flex;
-    align-items: center;
+/* Logo Section */
+.logo-section {
+    flex-shrink: 0;
 }
 
-.brand-link {
+.logo {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     text-decoration: none;
-    color: #1f2937;
+    color: var(--text-primary);
     font-weight: 700;
     font-size: 1.25rem;
-    transition: opacity 0.2s;
+    transition: var(--transition);
 }
 
-.brand-link:hover {
+.logo:hover {
     opacity: 0.8;
 }
 
-.brand-icon {
+.logo-icon {
     font-size: 1.5rem;
 }
 
-.brand-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.logo-text {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* RIGHT: Navigation (75% width, right-aligned) */
-.header-nav {
-    flex: 0 0 75%;
+/* Navigation */
+.main-navigation {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 0.5rem;
+    flex: 1;
+    justify-content: center;
 }
 
-/* Dropdown Base Styles */
-.nav-dropdown {
+.nav-item {
     position: relative;
 }
 
-.nav-dropdown-trigger {
+.nav-link {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.5rem;
     padding: 0.75rem 1rem;
     background: none;
     border: none;
-    color: #4b5563;
+    color: var(--text-secondary);
     font-size: 0.95rem;
     font-weight: 500;
     cursor: pointer;
-    border-radius: 6px;
-    transition: all 0.2s;
+    border-radius: var(--radius);
+    transition: var(--transition);
 }
 
-.nav-dropdown-trigger:hover {
-    background: #f3f4f6;
-    color: #1f2937;
+.nav-link:hover {
+    background: var(--background);
+    color: var(--text-primary);
 }
 
-.dropdown-icon {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
+.dropdown-arrow {
+    font-size: 0.8rem;
     transition: transform 0.2s;
 }
 
-.nav-dropdown-trigger[aria-expanded="true"] .dropdown-icon {
+.nav-link.dropdown-toggle[aria-expanded="true"] .dropdown-arrow {
     transform: rotate(180deg);
 }
 
-/* Dropdown Menu - Google Style */
-.nav-dropdown-menu {
+/* Dropdown Menu */
+.dropdown-menu {
     position: absolute;
     top: calc(100% + 8px);
-    right: 0;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    left: 0;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
     min-width: 280px;
     max-width: 320px;
     max-height: 400px;
@@ -187,23 +179,13 @@
     z-index: 1001;
 }
 
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown-trigger[aria-expanded="true"] + .nav-dropdown-menu {
+.nav-item:hover .dropdown-menu,
+.nav-link[aria-expanded="true"] + .dropdown-menu {
     display: block;
 }
 
-.dropdown-header {
-    padding: 1rem 1.25rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid #f3f4f6;
-}
-
-.dropdown-list {
-    max-height: 280px;
+.dropdown-content {
+    max-height: 320px;
     overflow-y: auto;
     padding: 0.5rem;
 }
@@ -211,81 +193,95 @@
 .dropdown-item {
     display: block;
     padding: 0.75rem 1rem;
-    color: #1f2937;
+    color: var(--text-primary);
     text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.2s;
+    border-radius: var(--radius);
+    transition: var(--transition);
     font-size: 0.95rem;
 }
 
 .dropdown-item:hover {
-    background: #f3f4f6;
-    color: #667eea;
+    background: var(--background);
+    color: var(--primary-color);
 }
 
 .dropdown-item-icon {
     margin-right: 0.75rem;
 }
 
-.dropdown-footer {
-    display: block;
-    padding: 1rem 1.25rem;
-    color: #667eea;
-    text-decoration: none;
-    font-weight: 500;
-    border-top: 1px solid #f3f4f6;
-    transition: all 0.2s;
+/* CTA Section */
+.cta-section {
+    flex-shrink: 0;
 }
 
-.dropdown-footer:hover {
-    background: #f9fafb;
-    color: #764ba2;
-}
-
-/* Test Button */
-.nav-test-button {
-    display: flex;
+.cta-button {
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: var(--radius);
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.2s;
-    margin-left: 1rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
-.nav-test-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.mobile-menu-toggle:hover {
+    background: var(--background);
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: var(--transition);
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .header-container {
+    .header-content {
         flex-direction: column;
-        height: auto;
-        padding: 1rem;
         gap: 1rem;
     }
 
-    .header-brand {
-        flex: none;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .header-nav {
-        flex: none;
+    .main-navigation {
+        order: 2;
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    .nav-dropdown-menu {
+    .cta-section {
+        order: 1;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        order: 3;
+    }
+
+    .dropdown-menu {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -293,27 +289,25 @@
         right: auto;
         max-width: 90vw;
         max-height: 70vh;
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-xl);
     }
 
-    .nav-test-button {
-        margin-left: 0;
-        margin-top: 0.5rem;
+    .cta-button {
         width: 100%;
         justify-content: center;
     }
 }
 
 /* Active page highlighting */
-.nav-dropdown-trigger[aria-expanded="true"],
-.nav-test-button[aria-current="page"] {
-    background: #f3f4f6;
-    color: #667eea;
+.nav-link[aria-current="page"] {
+    background: var(--background);
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 /* Smooth animations */
-.nav-dropdown-menu,
-.dropdown-icon {
+.dropdown-menu,
+.dropdown-arrow {
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 </style>
