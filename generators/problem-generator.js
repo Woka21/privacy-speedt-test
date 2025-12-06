@@ -513,6 +513,7 @@ const problemPageTemplate = (problem) => `
 
     <script src="/js/speedtest.js"></script>
     <script src="/js/ui.js"></script>
+    <script src="/js/header.js"></script>
 </body>
 </html>
 `;

@@ -421,6 +421,7 @@ const ispTemplate = (isp, city, state) => {
 
     <script src="/js/speedtest.js"></script>
     <script src="/js/ui.js"></script>
+    <script src="/js/header.js"></script>
     <script>
         // ISP-specific enhancements
         document.addEventListener('DOMContentLoaded', function() {

@@ -61,7 +61,7 @@ class HeaderNavigation {
             const ispsData = await ispsResponse.json();
             this.searchData.isps = ispsData.map(isp => ({
                 text: isp.name,
-                url: `/content/isps/${this.slugify(isp.name)}-speed-test-new-york.html`,
+                url: `/content/ISPs/${this.slugify(isp.name)}-speed-test-new-york.html`,
                 keywords: [isp.name.toLowerCase(), isp.type.toLowerCase()]
             }));
 
