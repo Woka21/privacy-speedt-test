@@ -1,4 +1,4 @@
-ader/**
+/**
  * ISP-Specific Content Generator
  * Creates ISP×City combination pages for provider-specific SEO
  */

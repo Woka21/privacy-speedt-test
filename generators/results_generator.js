@@ -71,6 +71,7 @@ const resultsTemplate = (speed) => {
     
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <script src="/js/header.js"></script>
     <style>
         .speed-rating { display: inline-block; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0.5rem 0; }
         .rating-very-slow { background: #ef4444; color: white; }
