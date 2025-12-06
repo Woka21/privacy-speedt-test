@@ -20,17 +20,17 @@ class HeaderNavigation {
     }
 
     async init() {
+        console.log('HeaderNavigation init called');
         // Load navigation data
         await this.loadNavigationData();
 
-        // Populate dropdowns
-        this.populateDropdowns();
-
-        // Setup event listeners
-        this.setupEventListeners();
+        // Setup search modal functionality
+        this.setupSearchModals();
 
         // Highlight current page
         this.highlightCurrentPage();
+
+        console.log('HeaderNavigation init completed');
     }
 
     /**
@@ -84,28 +84,36 @@ class HeaderNavigation {
      * Fallback data if JSON files aren't available
      */
     loadFallbackData() {
-        this.problemsData = [
-            { keyword: 'internet-keeps-disconnecting', title: 'Internet Keeps Disconnecting? 15 Proven Fixes That Actually Work [2024]' },
-            { keyword: 'why-is-my-internet-slow', title: 'Why Is My Internet Slow? Complete Speed Diagnosis Guide [2024]' },
-            { keyword: 'wifi-slow-but-ethernet-fast', title: 'WiFi Slow But Ethernet Fast? Here\'s Why & How to Fix It [2024]' },
-            { keyword: 'internet-speed-test-accurate', title: 'Are Internet Speed Tests Accurate? The Truth About Testing [2024]' },
-            { keyword: 'internet-speed-for-streaming', title: 'Internet Speed for Streaming: Exact Requirements for Netflix, Hulu & More [2024]' }
+        this.searchData.troubleshoot = [
+            { text: 'Internet Keeps Disconnecting?', url: '/content/problems/internet-keeps-disconnecting.html', keywords: ['disconnecting', 'connection drops'] },
+            { text: 'Why Is My Internet Slow?', url: '/content/problems/why-is-my-internet-slow.html', keywords: ['slow internet', 'speed issues'] },
+            { text: 'WiFi Slow But Ethernet Fast?', url: '/content/problems/wifi-slow-but-ethernet-fast.html', keywords: ['wifi slow', 'ethernet fast'] },
+            { text: 'Are Internet Speed Tests Accurate?', url: '/content/problems/internet-speed-test-accurate.html', keywords: ['speed test', 'accurate'] },
+            { text: 'Internet Speed for Streaming', url: '/content/problems/internet-speed-for-streaming.html', keywords: ['streaming', 'netflix', 'hulu'] }
         ];
 
-        this.citiesData = [
-            { name: 'New York', state: 'NY' },
-            { name: 'Los Angeles', state: 'CA' },
-            { name: 'Chicago', state: 'IL' },
-            { name: 'Houston', state: 'TX' },
-            { name: 'Phoenix', state: 'AZ' }
+        this.searchData.locations = [
+            { text: 'New York, NY', url: '/content/locations/speed-test-new-york-ny.html', keywords: ['new york', 'ny', 'new york ny'] },
+            { text: 'Los Angeles, CA', url: '/content/locations/speed-test-los-angeles-ca.html', keywords: ['los angeles', 'ca', 'los angeles ca'] },
+            { text: 'Chicago, IL', url: '/content/locations/speed-test-chicago-il.html', keywords: ['chicago', 'il', 'chicago il'] },
+            { text: 'Houston, TX', url: '/content/locations/speed-test-houston-tx.html', keywords: ['houston', 'tx', 'houston tx'] },
+            { text: 'Phoenix, AZ', url: '/content/locations/speed-test-phoenix-az.html', keywords: ['phoenix', 'az', 'phoenix az'] }
         ];
 
-        this.ispsData = [
-            { name: 'Xfinity', type: 'Cable' },
-            { name: 'Spectrum', type: 'Cable' },
-            { name: 'AT&T', type: 'Mixed' },
-            { name: 'Verizon Fios', type: 'Fiber' },
-            { name: 'CenturyLink', type: 'Mixed' }
+        this.searchData.isps = [
+            { text: 'Xfinity', url: '/content/isps/xfinity-speed-test.html', keywords: ['xfinity', 'cable'] },
+            { text: 'Spectrum', url: '/content/isps/spectrum-speed-test.html', keywords: ['spectrum', 'cable'] },
+            { text: 'AT&T', url: '/content/isps/at&t-speed-test.html', keywords: ['at&t', 'mixed'] },
+            { text: 'Verizon Fios', url: '/content/isps/verizon-fios-speed-test.html', keywords: ['verizon', 'fiber'] },
+            { text: 'CenturyLink', url: '/content/isps/centurylink-speed-test.html', keywords: ['centurylink', 'mixed'] }
+        ];
+
+        this.searchData.results = [
+            { text: '10 Mbps', url: '/content/results/what-does-10-mbps-mean.html', keywords: ['10 mbps', 'basic', 'sufficient for basic browsing'] },
+            { text: '25 Mbps', url: '/content/results/what-does-25-mbps-mean.html', keywords: ['25 mbps', 'good', 'hd streaming'] },
+            { text: '50 Mbps', url: '/content/results/what-does-50-mbps-mean.html', keywords: ['50 mbps', 'very good', '4k streaming'] },
+            { text: '100 Mbps', url: '/content/results/what-does-100-mbps-mean.html', keywords: ['100 mbps', 'excellent', 'gaming'] },
+            { text: '200 Mbps', url: '/content/results/what-does-200-mbps-mean.html', keywords: ['200 mbps', 'outstanding', 'power users'] }
         ];
     }
 
@@ -113,10 +121,13 @@ class HeaderNavigation {
      * Setup search modal functionality
      */
     setupSearchModals() {
+        console.log('Setting up search modals, found triggers:', this.searchTriggers.length);
         this.searchTriggers.forEach(trigger => {
+            console.log('Attaching click listener to:', trigger, 'with data-search:', trigger.dataset.search);
             trigger.addEventListener('click', (e) => {
                 e.preventDefault();
                 const searchType = trigger.dataset.search;
+                console.log('Opening modal for type:', searchType);
                 this.openSearchModal(searchType);
             });
         });
@@ -263,77 +274,7 @@ class HeaderNavigation {
         });
     }
 
-    /**
-     * Toggle individual dropdown
-     */
-    toggleDropdown(trigger) {
-        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
 
-        // Close all dropdowns first
-        this.closeAllDropdowns();
-
-        // Open if was closed
-        if (!isExpanded) {
-            trigger.setAttribute('aria-expanded', 'true');
-            this.addDropdownOverlay();
-        }
-    }
-
-    /**
-     * Close all dropdowns
-     */
-    closeAllDropdowns() {
-        this.triggers.forEach(trigger => {
-            trigger.setAttribute('aria-expanded', 'false');
-        });
-        this.removeDropdownOverlay();
-    }
-
-    /**
-     * Add overlay for mobile dropdowns
-     */
-    addDropdownOverlay() {
-        let overlay = document.getElementById('header-overlay');
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.id = 'header-overlay';
-            overlay.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0,0,0,0.5);
-                z-index: 999;
-                backdrop-filter: blur(2px);
-            `;
-            overlay.addEventListener('click', () => this.closeAllDropdowns());
-            document.body.appendChild(overlay);
-        }
-        overlay.style.display = 'block';
-    }
-
-    /**
-     * Remove dropdown overlay
-     */
-    removeDropdownOverlay() {
-        const overlay = document.getElementById('header-overlay');
-        if (overlay) {
-            overlay.style.display = 'none';
-        }
-    }
-
-    /**
-     * Touch device handlers
-     */
-    setupTouchHandlers() {
-        // Close dropdowns on touch outside
-        document.addEventListener('touchstart', (e) => {
-            if (!e.target.closest('.nav-dropdown')) {
-                this.closeAllDropdowns();
-            }
-        }, { passive: true });
-    }
 
     /**
      * Handle search input
@@ -418,16 +359,22 @@ class HeaderNavigation {
      */
     getNavigationData() {
         return {
-            problems: this.problemsData,
-            cities: this.citiesData,
-            isps: this.ispsData
+            troubleshoot: this.searchData.troubleshoot,
+            locations: this.searchData.locations,
+            isps: this.searchData.isps,
+            results: this.searchData.results
         };
     }
 }
 
-// Initialize header when DOM is ready
+// Make class available globally
+window.HeaderNavigation = HeaderNavigation;
+
+// Initialize header when DOM is ready (fallback)
 document.addEventListener('DOMContentLoaded', () => {
-    window.headerNavigation = new HeaderNavigation();
+    if (!window.headerNavigation) {
+        window.headerNavigation = new HeaderNavigation();
+    }
 });
 
 // Export for use in other modules

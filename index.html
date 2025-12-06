@@ -38,6 +38,19 @@
         .then(response => response.text())
         .then(html => {
             document.getElementById('header-container').innerHTML = html;
+
+            // Load header JavaScript after header is inserted
+            const headerScript = document.createElement('script');
+            headerScript.src = '/js/header.js';
+            headerScript.type = 'module';
+            document.head.appendChild(headerScript);
+
+            // Initialize header navigation after script loads
+            headerScript.onload = () => {
+                if (window.HeaderNavigation) {
+                    window.headerNavigation = new window.HeaderNavigation();
+                }
+            };
         })
         .catch(error => {
             console.error('Failed to load header:', error);
