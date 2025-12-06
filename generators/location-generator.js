@@ -14,8 +14,8 @@ const locationTemplate = (city) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Internet Speed Test ${city.name} | Check Your Connection in ${city.state}</title>
-    <meta name="description" content="Test your internet speed in ${city.name}, ${city.state}. Compare results with ${city.isps.join(', ')} and see how your connection stacks up against the ${city.avgSpeed} Mbps city average.">
+    <title>${city.name} Internet Speed Test ${city.avgSpeed} Mbps | Fast & Free Speed Test ${city.state}</title>
+    <meta name="description" content="Test your internet speed in ${city.name}, ${city.state} instantly. Compare with ${city.isps.join(', ')} providers. Average speed: ${city.avgSpeed} Mbps. Free, fast, and accurate speed testing.">
     <meta name="keywords" content="${city.name.toLowerCase()} internet speed test, speed test ${city.name.toLowerCase()}, ${city.isps.map(isp => `${isp.toLowerCase()} ${city.name.toLowerCase()}`).join(', ')}, internet speed ${city.name.toLowerCase()}, broadband speed test ${city.name.toLowerCase()}">
     
     <!-- Canonical URL -->
@@ -87,6 +87,7 @@ const locationTemplate = (city) => `
         <div class="container">
             <div class="speed-test-card">
                 <div id="test-interface">
+                    <p class="intro-paragraph">Need to check your internet speed in ${city.name}? Our free speed test takes just seconds and provides accurate results. Compare your connection with ${city.isps.join(', ')} providers and see how you stack up against the ${city.avgSpeed} Mbps city average.</p>
                     <button id="start-test" class="primary-button">
                         <span>🚀 Test ${city.name} Speed</span>
                     </button>

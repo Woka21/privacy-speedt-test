@@ -1,4 +1,4 @@
-/**
+ n/**
  * Problem-Solving Content Generator
  * Creates 50+ troubleshooting pages targeting high-intent searches
  */
@@ -491,6 +491,14 @@ const problemPageTemplate = (problem) => `
             <p class="subtitle">${problem.description}</p>
         </div>
     </header>
+    <main class="main">
+        <div class="container">
+            <div class="intro-paragraph">
+                <p>Experiencing ${problem.keyword}? You're not alone - ${problem.volume.toLocaleString()} people search for this issue every month. This comprehensive guide provides proven solutions to fix ${problem.keyword} problems quickly and effectively. Follow our step-by-step troubleshooting process to identify and resolve the issue.</p>
+            </div>
+        </div>
+    </main>
+
     ${problemTemplates.heroSection(problem)}
     ${problemTemplates.solutionSections(problem)}
     ${problemTemplates.ispSpecificSection(problem)}
