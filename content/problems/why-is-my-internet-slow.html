@@ -141,14 +141,28 @@
     </style>
 </head>
 <body>
-    
-<header class="header">
-    <div class="container">
-        <h1>🛡️ Why Is My Internet Slow? Complete Speed Diagnosis Guide [2024]</h1>
-        <p class="subtitle">Diagnose and fix slow internet speeds with our comprehensive troubleshooting guide. Includes speed test methods, ISP-specific solutions, and time-based analysis.</p>
-    </div>
-</header>
+    <!-- Header -->
+    <div id="header-container"></div>
 
+    <script>
+    // Load header component
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Failed to load header:', error);
+        });
+    </script>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>🛡️ Why Is My Internet Slow? Complete Speed Diagnosis Guide [2024]</h1>
+            <p class="subtitle">Diagnose and fix slow internet speeds with our comprehensive troubleshooting guide. Includes speed test methods, ISP-specific solutions, and time-based analysis.</p>
+        </div>
+    </header>
     
 <section class="hero-section">
     <div class="container">

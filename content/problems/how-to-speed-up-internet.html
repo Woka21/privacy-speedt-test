@@ -118,14 +118,28 @@
     </style>
 </head>
 <body>
-    
-<header class="header">
-    <div class="container">
-        <h1>🛡️ How to Speed Up Internet: 25 Proven Methods [2024 Guide]</h1>
-        <p class="subtitle">Speed up your internet connection with these proven methods. Works for all providers and connection types. Includes ISP-specific optimizations.</p>
-    </div>
-</header>
+    <!-- Header -->
+    <div id="header-container"></div>
 
+    <script>
+    // Load header component
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Failed to load header:', error);
+        });
+    </script>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>🛡️ How to Speed Up Internet: 25 Proven Methods [2024 Guide]</h1>
+            <p class="subtitle">Speed up your internet connection with these proven methods. Works for all providers and connection types. Includes ISP-specific optimizations.</p>
+        </div>
+    </header>
     
 <section class="hero-section">
     <div class="container">

@@ -135,14 +135,28 @@
     </style>
 </head>
 <body>
-    
-<header class="header">
-    <div class="container">
-        <h1>🛡️ Internet Keeps Disconnecting? 15 Proven Fixes That Actually Work [2024]</h1>
-        <p class="subtitle">Stop internet disconnections with these proven solutions. Works for Xfinity, Spectrum, AT&T and all connection types. Includes ISP-specific fixes.</p>
-    </div>
-</header>
+    <!-- Header -->
+    <div id="header-container"></div>
 
+    <script>
+    // Load header component
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Failed to load header:', error);
+        });
+    </script>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>🛡️ Internet Keeps Disconnecting? 15 Proven Fixes That Actually Work [2024]</h1>
+            <p class="subtitle">Stop internet disconnections with these proven solutions. Works for Xfinity, Spectrum, AT&T and all connection types. Includes ISP-specific fixes.</p>
+        </div>
+    </header>
     
 <section class="hero-section">
     <div class="container">

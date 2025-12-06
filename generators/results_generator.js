@@ -104,7 +104,23 @@ const resultsTemplate = (speed) => {
     </style>
 </head>
 <body>
-    <header class="header">
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <script>
+    // Load header component
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Failed to load header:', error);
+        });
+    </script>
+
+    <!-- Page Header -->
+    <header class="page-header">
         <div class="container">
             <h1>Is ${speed} Mbps Good? Complete Speed Guide</h1>
             <p class="subtitle">Understand what ${speed} Mbps internet speed means for your usage</p>

@@ -118,14 +118,28 @@
     </style>
 </head>
 <body>
-    
-<header class="header">
-    <div class="container">
-        <h1>🛡️ Best Time to Test Internet Speed: When You'll Get Accurate Results [2024]</h1>
-        <p class="subtitle">Find the best time to test your internet speed for accurate results. Avoid peak hours and network congestion with this complete timing guide.</p>
-    </div>
-</header>
+    <!-- Header -->
+    <div id="header-container"></div>
 
+    <script>
+    // Load header component
+    fetch('/header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Failed to load header:', error);
+        });
+    </script>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>🛡️ Best Time to Test Internet Speed: When You'll Get Accurate Results [2024]</h1>
+            <p class="subtitle">Find the best time to test your internet speed for accurate results. Avoid peak hours and network congestion with this complete timing guide.</p>
+        </div>
+    </header>
     
 <section class="hero-section">
     <div class="container">
