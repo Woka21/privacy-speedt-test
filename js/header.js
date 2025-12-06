@@ -52,7 +52,7 @@ class HeaderNavigation {
             const citiesData = await citiesResponse.json();
             this.searchData.locations = citiesData.map(city => ({
                 text: `${city.name}, ${city.state}`,
-                url: `/content/locations/speed-test-${this.slugify(city.name)}-${city.state.toLowerCase()}.html`,
+                url: `/content/locations/speed-test-${this.slugify(city.name)}.html`,
                 keywords: [city.name.toLowerCase(), city.state.toLowerCase(), `${city.name} ${city.state}`.toLowerCase()]
             }));
 
@@ -61,9 +61,13 @@ class HeaderNavigation {
             const ispsData = await ispsResponse.json();
             this.searchData.isps = ispsData.map(isp => ({
                 text: isp.name,
-                url: `/content/isps/${this.slugify(isp.name)}-speed-test.html`,
+                url: `/content/isps/${this.slugify(isp.name)}-speed-test-new-york.html`,
                 keywords: [isp.name.toLowerCase(), isp.type.toLowerCase()]
             }));
+
+            // For ISPs, we need to create URLs that match the actual file structure
+            // The ISP files are named like "at&t-speed-test-new-york.html" where each ISP has pages for different cities
+            // For search, we'll link to the New York page as a representative example
 
             // Load results data
             const resultsResponse = await fetch('/data/results.json');
@@ -93,19 +97,19 @@ class HeaderNavigation {
         ];
 
         this.searchData.locations = [
-            { text: 'New York, NY', url: '/content/locations/speed-test-new-york-ny.html', keywords: ['new york', 'ny', 'new york ny'] },
-            { text: 'Los Angeles, CA', url: '/content/locations/speed-test-los-angeles-ca.html', keywords: ['los angeles', 'ca', 'los angeles ca'] },
-            { text: 'Chicago, IL', url: '/content/locations/speed-test-chicago-il.html', keywords: ['chicago', 'il', 'chicago il'] },
-            { text: 'Houston, TX', url: '/content/locations/speed-test-houston-tx.html', keywords: ['houston', 'tx', 'houston tx'] },
-            { text: 'Phoenix, AZ', url: '/content/locations/speed-test-phoenix-az.html', keywords: ['phoenix', 'az', 'phoenix az'] }
+            { text: 'New York, NY', url: '/content/locations/speed-test-new-york.html', keywords: ['new york', 'ny', 'new york ny'] },
+            { text: 'Los Angeles, CA', url: '/content/locations/speed-test-los-angeles.html', keywords: ['los angeles', 'ca', 'los angeles ca'] },
+            { text: 'Chicago, IL', url: '/content/locations/speed-test-chicago.html', keywords: ['chicago', 'il', 'chicago il'] },
+            { text: 'Houston, TX', url: '/content/locations/speed-test-houston.html', keywords: ['houston', 'tx', 'houston tx'] },
+            { text: 'Phoenix, AZ', url: '/content/locations/speed-test-phoenix.html', keywords: ['phoenix', 'az', 'phoenix az'] }
         ];
 
         this.searchData.isps = [
-            { text: 'Xfinity', url: '/content/isps/xfinity-speed-test.html', keywords: ['xfinity', 'cable'] },
-            { text: 'Spectrum', url: '/content/isps/spectrum-speed-test.html', keywords: ['spectrum', 'cable'] },
-            { text: 'AT&T', url: '/content/isps/at&t-speed-test.html', keywords: ['at&t', 'mixed'] },
-            { text: 'Verizon Fios', url: '/content/isps/verizon-fios-speed-test.html', keywords: ['verizon', 'fiber'] },
-            { text: 'CenturyLink', url: '/content/isps/centurylink-speed-test.html', keywords: ['centurylink', 'mixed'] }
+            { text: 'Xfinity', url: '/content/isps/xfinity-speed-test-new-york.html', keywords: ['xfinity', 'cable'] },
+            { text: 'Spectrum', url: '/content/isps/spectrum-speed-test-new-york.html', keywords: ['spectrum', 'cable'] },
+            { text: 'AT&T', url: '/content/isps/at&t-speed-test-new-york.html', keywords: ['at&t', 'mixed'] },
+            { text: 'Verizon Fios', url: '/content/isps/verizon-fios-speed-test-new-york.html', keywords: ['verizon', 'fiber'] },
+            { text: 'CenturyLink', url: '/content/isps/centurylink-speed-test-new-york.html', keywords: ['centurylink', 'mixed'] }
         ];
 
         this.searchData.results = [
