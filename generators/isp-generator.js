@@ -102,7 +102,7 @@ const ispTemplate = (isp, city, state) => {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>${isp} Speed Test ${city} | Check Your ${isp} Connection</title>
+    <title>${isp} Speed Test: Free Tool to Boost Your WiFi in ${city}</title>
     <meta name="description" content="Test your ${isp} internet speed in ${city}, ${state}. See if ${isp} is delivering promised speeds and compare with other providers.">
     <meta name="keywords" content="${isp.toLowerCase()} speed test, ${isp.toLowerCase()} ${city.toLowerCase()}, ${isp.toLowerCase()} internet speed, test ${isp.toLowerCase()} connection, ${isp.toLowerCase()} speed check ${city.toLowerCase()}">
     
@@ -163,7 +163,8 @@ const ispTemplate = (isp, city, state) => {
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
-            <h1>🛡️ ${isp} Speed Test ${city}</h1>
+            <h1>${isp} Speed Test Guide</h1>
+            <h2>Why ${isp} Users Need Regular Speed Checks in ${city}</h2>
             <p class="subtitle">Is ${isp} delivering promised speeds in ${city}? • Test now</p>
         </div>
     </header>
