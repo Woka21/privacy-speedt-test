@@ -34,8 +34,9 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <h1>🛡️ Privacy-First Speed Test</h1>
-                    <p class="subtitle">Zero data collection • Instant results • Complete privacy</p>
+                    <a href="/" class="logo-link">
+                        <h1>🛡️ Privacy Speed Test</h1>
+                    </a>
                 </div>
                 <nav class="main-nav">
                     <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
@@ -44,54 +45,33 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="/" class="nav-link">🏠 Home</a></li>
-                        <li class="nav-dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">🌐 ISPs</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/content/ISPs/at&t-speed-test-new-york.html" class="dropdown-link">AT&T</a></li>
-                                <li><a href="/content/ISPs/centurylink-speed-test-austin.html" class="dropdown-link">CenturyLink</a></li>
-                                <li><a href="/content/ISPs/cox-speed-test-austin.html" class="dropdown-link">Cox</a></li>
-                                <li><a href="/content/ISPs/google-fiber-speed-test-austin.html" class="dropdown-link">Google Fiber</a></li>
-                                <li><a href="/content/ISPs/spectrum-speed-test-new-york.html" class="dropdown-link">Spectrum</a></li>
-                                <li><a href="/content/ISPs/verizon-fios-speed-test-new-york.html" class="dropdown-link">Verizon Fios</a></li>
-                                <li class="view-all"><a href="#" class="dropdown-link">View All ISPs →</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">📍 Locations</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/content/locations/speed-test-new-york.html" class="dropdown-link">New York</a></li>
-                                <li><a href="/content/locations/speed-test-los-angeles.html" class="dropdown-link">Los Angeles</a></li>
-                                <li><a href="/content/locations/speed-test-chicago.html" class="dropdown-link">Chicago</a></li>
-                                <li><a href="/content/locations/speed-test-houston.html" class="dropdown-link">Houston</a></li>
-                                <li><a href="/content/locations/speed-test-phoenix.html" class="dropdown-link">Phoenix</a></li>
-                                <li class="view-all"><a href="#" class="dropdown-link">View All Cities →</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/content/problems/" class="nav-link">🔧 Problems</a></li>
-                        <li><a href="/content/results/" class="nav-link">📊 Results</a></li>
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="#test-interface" class="nav-link">Speed Test</a></li>
+                        <li><a href="/content/results/" class="nav-link">Results</a></li>
+                        <li><a href="/content/problems/" class="nav-link">Help</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
                     </ul>
                 </nav>
             </div>
+        </div>
+    </header>
 
-            <!-- Location/ISP Detection Banner -->
-            <div id="detection-banner" class="detection-banner hidden">
-                <div class="container">
-                    <div class="detection-content">
-                        <div class="detection-icon">🎯</div>
-                        <div class="detection-text">
-                            <strong id="detection-message">We detected you're in New York using AT&T</strong>
-                            <p id="detection-suggestion">Check your local AT&T speeds or explore other options</p>
-                        </div>
-                        <div class="detection-actions">
-                            <button id="visit-local-page" class="primary-button small">Visit Local Page</button>
-                            <button id="dismiss-detection" class="secondary-button small">Dismiss</button>
-                        </div>
-                    </div>
+    <!-- Location/ISP Detection Banner -->
+    <div id="detection-banner" class="detection-banner hidden">
+        <div class="container">
+            <div class="detection-content">
+                <div class="detection-icon">🎯</div>
+                <div class="detection-text">
+                    <strong id="detection-message">We detected you're in New York using AT&T</strong>
+                    <p id="detection-suggestion">Check your local AT&T speeds or explore other options</p>
+                </div>
+                <div class="detection-actions">
+                    <button id="visit-local-page" class="primary-button small">Visit Local Page</button>
+                    <button id="dismiss-detection" class="secondary-button small">Dismiss</button>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- Main Content -->
     <main class="main">
