@@ -245,7 +245,7 @@ function optimizeExistingPages() {
                     // Add FAQ schema if not present
                     if (dir === 'problems' && !html.includes('FAQPage')) {
                         const faqs = generateFAQsForProblem(file);
-                        const faqSchema = seoRules.metaTemplates.FAQPage(faqs);
+                        const faqSchema = seoRules.schemaTemplates.FAQPage(faqs);
                         html = html.replace('</head>', `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n</head>`);
                     }
                     
